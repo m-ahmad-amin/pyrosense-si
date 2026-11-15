@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyroSense SI | NASA PSI Combustion Workbench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="nasa-mark">NASA PSI // GRC</div>
+        <h1>PyroSense SI</h1>
+        <p>Low-Gravity Combustion &amp; Fire Safety Workbench</p>
+      </div>
+
+      <nav class="nav-list" aria-label="Primary modules">
+        <button class="nav-item active" data-tab="tab-ranker">
+          <span class="nav-num">01</span>
+          <span>Mission Ranker</span>
+        </button>
+        <button class="nav-item" data-tab="tab-pinn">
+          <span class="nav-num">02</span>
+          <span>Partial-g PINN Lab</span>
+        </button>
+        <button class="nav-item" data-tab="tab-cv">
+          <span class="nav-num">03</span>
+          <span>Flame Vision &amp; U-Net</span>
+        </button>
+        <button class="nav-item" data-tab="tab-compare">
+          <span class="nav-num">04</span>
+          <span>Study Diff &amp; Aerosols</span>
+        </button>
+        <button class="nav-item" data-tab="tab-lineage">
+          <span class="nav-num">05</span>
+          <span>SI Query &amp; Spinoffs</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="meta-row"><span>Repository</span><strong>s3://nasa-psi</strong></div>
+        <div class="meta-row"><span>Investigations</span><strong id="hdr-inv-count">16</strong></div>
+        <div class="meta-row"><span>O2 Envelope</span><strong>15% - 85%</strong></div>
+        <div class="meta-row"><span>Model Device</span><strong id="hdr-device">CUDA</strong></div>
+      </div>
+    </aside>
+
+    <main class="main-stage">
+      <section id="tab-ranker" class="tab-panel active">
+        <header class="page-head">
+          <div>
+            <h2>Habitable Environment Investigation Ranker</h2>
+            <p>Rank NASA PSI combustion experiments against target spacecraft, lunar base, rover, or spacesuit atmospheres.</p>
+          </div>
+          <div class="head-actions">
+            <button id="btn-export-csv" class="btn-outline">Export Ranked CSV</button>
+          </div>
+        </header>
+
+        <div class="split-workbench">
+          <div class="card controls-card">
+            <h3>Atmosphere Specification</h3>
+            <label class="field-label" for="preset-select">Mission Preset</label>
+            <select id="preset-select" class="control"></select>
+            <p id="preset-summary" class="note-box"></p>
+
+            <div class="range-item">
+              <div class="range-top"><span>Oxygen Concentration</span><strong id="val-rank-o2">34.0%</strong></div>
+              <input type="range" id="rng-rank-o2" min="15" max="100" step="0.5" value="34" />
+            </div>
+
+            <div class="range-item">
+              <div class="range-top"><span>Cabin Pressure</span><strong id="val-rank-p">10.2 psi</strong></div>
+              <input type="range" id="rng-rank-p" min="4.3" max="14.7" step="0.1" value="10.2" />
+            </div>
+
+            <div class="range-item">
+              <div class="range-top"><span>Gravity Regime</span><strong id="val-rank-g">0.16g</strong></div>
+              <input type="range" id="rng-rank-g" min="0.0" max="1.0" step="0.02" value="0.16" />
+            </div>
+
+            <div class="range-item">
+              <div class="range-top"><span>Ventilation Flow</span><strong id="val-rank-flow">12.0 cm/s</strong></div>
+              <input type="range" id="rng-rank-flow" min="0" max="55" step="1" value="12" />
+            </div>
+
+            <label class="field-label" for="pillar-select">Safety Pillar</label>
+            <select id="pillar-select" class="control">
+              <option value="All">All Pillars (Prevention, Detection, Suppression)</option>
+              <option value="Prevention">Prevention (Flammability Limits)</option>
+              <option value="Detection">Detection (Smoke &amp; Dust Aerosols)</option>
+              <option value="Suppression">Suppression (Extinguishment &amp; Cool Flames)</option>
+            </select>
+
+            <button id="btn-run-rank" class="btn-solid">Update Ranking</button>
+          </div>
+
+          <div class="card table-card">
+            <div class="card-head">
+              <h3>Ranked PSI Investigations</h3>
+              <span class="tag" id="rank-count-badge">16 STUDIES</span>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table" id="rank-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Investigation</th>
+                    <th>PSI ID</th>
+                    <th>Pillar</th>
+                    <th>Hardware</th>
+                    <th>Fuel</th>
+                    <th>Match</th>
+                    <th>Rationale &amp; Findings</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-pinn" class="tab-panel">
+        <header class="page-head">
+          <div>
+            <h2>Partial-Gravity Flammability &amp; 2D Reacting-Flow PINN</h2>
+            <p>Bound untested Lunar (0.16g) and Martian (0.38g) flammability using 0g ISS, E-FIELD, and 1g baselines.</p>
+          </div>
+        </header>
+
+        <div class="split-workbench">
+          <div class="card controls-card">
+            <h3>Material &amp; Boundary Inputs</h3>
+            <label class="field-label" for="pinn-material">Material / Fuel Simulant</label>
+            <select id="pinn-material" class="control">
+              <option value="Sibal_Cotton_Fiberglass">Sibal (75% Cotton / 25% Fiberglass)</option>
+              <option value="PMMA_Black">Cast Black PMMA Acrylic (1.0 mm)</option>
+              <option value="PMMA_Clear">Clear PMMA Acrylic (3.2 mm)</option>
+              <option value="Nomex_HT90">Nomex HT90-40 Fabric</option>
+              <option value="Silicone_Sheet">Silicone Elastomer Sheet (0.6 mm)</option>
+              <option value="Ethylene_Gas_Simulant">Ethylene Gas Burner (ACME BRE)</option>
+              <option value="Propane_Inverse">Inverse High-O2 Propane (CFI-G)</option>
+            </select>
+
+            <div class="range-item">
+              <div class="range-top"><span>Ambient Oxygen</span><strong id="val-pinn-o2">34.0%</strong></div>
+              <input type="range" id="rng-pinn-o2" min="15" max="85" step="0.5" value="34" />
+            </div>
+
+            <div class="range-item">
+              <div class="range-top"><span>Cabin Pressure</span><strong id="val-pinn-p">10.2 psi</strong></div>
+              <input type="range" id="rng-pinn-p" min="4.3" max="14.7" step="0.1" value="10.2" />
+            </div>
+
+            <div class="range-item">
+              <div class="range-top"><span>Ventilation Flow</span><strong id="val-pinn-flow">8.0 cm/s</strong></div>
+              <input type="range" id="rng-pinn-flow" min="0" max="50" step="0.5" value="8" />
+            </div>
+
+            <div class="range-item">
+              <div class="range-top"><span>Target Gravity</span><strong id="val-pinn-g">0.16g</strong></div>
+              <input type="range" id="rng-pinn-g" min="0.0" max="1.0" step="0.02" value="0.16" />
+            </div>
+
+            <div class="range-item">
+              <div class="range-top"><span>E-FIELD Voltage</span><strong id="val-pinn-efield">0 V/cm</strong></div>
+              <input type="range" id="rng-pinn-efield" min="0" max="1500" step="20" value="0" />
+            </div>
+
+            <button id="btn-run-pinn" class="btn-solid">Run PINN Inference</button>
+
+            <div class="metric-list">
+              <div class="metric-row"><span>Spread Rate (95% CI)</span><strong id="kpi-spread">--</strong></div>
+              <div class="metric-row"><span>Limiting O2 Index</span><strong id="kpi-loi">--</strong></div>
+              <div class="metric-row"><span>Peak Flame Temp</span><strong id="kpi-temp">--</strong></div>
+              <div class="metric-row"><span>Ignition Status</span><strong id="kpi-status">--</strong></div>
+            </div>
+          </div>
+
+          <div class="stack-col">
+            <div class="card">
+              <div class="card-head">
+                <h3>0g to 1g Bounding Curves (with 95% Epistemic Confidence Band)</h3>
+                <span class="tag">LUCI &amp; FM2 PRECURSOR</span>
+              </div>
+              <div class="charts-two">
+                <div class="chart-wrap"><canvas id="chart-pinn-spread"></canvas></div>
+                <div class="chart-wrap"><canvas id="chart-pinn-loi"></canvas></div>
+              </div>
+            </div>
+
+            <div class="card" id="field-2d-panel" style="display:none;">
+              <div class="card-head">
+                <h3>2D Navier-Stokes + Arrhenius + Radiation PDE Temperature Fields</h3>
+                <span class="tag">FOURIER 2D PINN</span>
+              </div>
+              <img id="pinn-2d-img" class="wide-media" alt="2D Reacting Flow PDE Fields" />
+              <div class="four-grid" id="field-2d-summaries"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-cv" class="tab-panel">
+        <header class="page-head">
+          <div>
+            <h2>Microgravity Flame Morphology &amp; Convolutional U-Net Segmentation</h2>
+            <p>Automated segmentation of blue chemiluminescence cores, cool flames, and radiative soot shells.</p>
+          </div>
+        </header>
+
+        <div class="card" id="unet-banner" style="display:none; margin-bottom:18px;">
+          <div class="card-head">
+            <h3>FlameUNet 3-Class Validation Strip (Background / Blue Core / Soot Shell)</h3>
+            <span class="tag" id="unet-stats"></span>
+          </div>
+          <img id="unet-strip-img" class="wide-media" alt="FlameUNet Segmentation Strip" />
+        </div>
+
+        <div class="cv-grid" id="cv-cards-container"></div>
+      </section>
+
+      <section id="tab-compare" class="tab-panel">
+        <header class="page-head">
+          <div>
+            <h2>Investigation Variable Diff &amp; Smoke-vs-Dust Aerosol Discriminator</h2>
+            <p>Compare hardware inserts, intra-study variables, and SAME / DAFT-2 optical particle separation.</p>
+          </div>
+        </header>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head">
+              <h3>Side-by-Side Study Comparison</h3>
+              <span class="tag">CIR vs MSG</span>
+            </div>
+            <div class="two-col-tight">
+              <div>
+                <label class="field-label" for="cmp-left">Primary Study</label>
+                <select id="cmp-left" class="control"></select>
+              </div>
+              <div>
+                <label class="field-label" for="cmp-right">Comparison Study</label>
+                <select id="cmp-right" class="control"></select>
+              </div>
+            </div>
+            <div id="compare-output" class="diff-stack"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3>SAME Smoke vs. DAFT-2 Regolith Dust</h3>
+              <span class="tag">FALSE ALARM MITIGATION</span>
+            </div>
+            <div class="two-col-tight">
+              <div>
+                <label class="field-label" for="aero-mat">Pyrolysis Source</label>
+                <select id="aero-mat" class="control">
+                  <option value="kapton_wire">Kapton Wire Insulation</option>
+                  <option value="teflon_insulation">Teflon (PTFE) Harness</option>
+                  <option value="silicone_elastomer">Silicone Avionics Sealant</option>
+                  <option value="cotton_cellulose">Cotton / Cellulose Lint</option>
+                </select>
+              </div>
+              <div>
+                <label class="field-label" for="aero-g">Settling Gravity</label>
+                <select id="aero-g" class="control">
+                  <option value="0.0">0.00g (ISS / Artemis II Transit)</option>
+                  <option value="0.16" selected>0.16g (Lunar Habitat)</option>
+                  <option value="0.38">0.38g (Mars Habitat)</option>
+                  <option value="1.0">1.00g (Earth Mining Spinoff)</option>
+                </select>
+              </div>
+            </div>
+            <div class="chart-wrap" style="margin-top:14px;"><canvas id="chart-aerosol"></canvas></div>
+            <p id="aerosol-summary" class="note-box"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-lineage" class="tab-panel">
+        <header class="page-head">
+          <div>
+            <h2>SI Research Synthesis &amp; Historical-to-Spinoff Lineage</h2>
+            <p>Query PSI experimental findings by audience role and trace flight incidents to Earth fire safety tech.</p>
+          </div>
+        </header>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-head">
+              <h3>SI Research Copilot</h3>
+              <span class="tag">PSI GROUNDED</span>
+            </div>
+            <label class="field-label" for="si-role">Audience Profile</label>
+            <select id="si-role" class="control">
+              <option value="engineer">Aerospace Engineer (Margins &amp; Habitat Specs)</option>
+              <option value="professor">Professor / PI (Scaling Laws &amp; Methodology)</option>
+              <option value="student">Student (Core Mechanisms &amp; Hardware)</option>
+            </select>
+
+            <label class="field-label" for="si-query">Research Question</label>
+            <textarea id="si-query" class="control" rows="3">Why does a 34% O2, 10.2 psi Lunar Base atmosphere increase solid material flammability compared to the ISS, and which PSI experiments bound this risk?</textarea>
+
+            <div class="chip-row">
+              <button class="chip-btn" data-q="How did ACME E-FIELD Flames mimic partial gravity on the ISS, and how does it help before LUCI and FM2 launch?">E-FIELD Partial Gravity</button>
+              <button class="chip-btn" data-q="Compare solid flammability in BASS-II vs gaseous emulation in ACME BRE and high-oxygen CFI-G (85% O2).">BASS-II vs BRE &amp; CFI-G</button>
+              <button class="chip-btn" data-q="How was the SAME smoke detector repurposed for DAFT-2 dust detection, and how does it prevent false alarms like Artemis II?">SAME vs DAFT-2</button>
+              <button class="chip-btn" data-q="Explain droplet cool flames in FLEX and CFI and how ISS fine-water-mist extinguishers apply to Earth.">FLEX Cool Flames &amp; Earth</button>
+            </div>
+
+            <button id="btn-ask-si" class="btn-solid">Synthesize PSI Evidence</button>
+            <div id="si-response-box" class="si-output"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-head">
+              <h3>Flight Incidents &amp; Terrestrial Spinoffs</h3>
+              <span class="tag">APOLLO / MIR / SPINOFFS</span>
+            </div>
+            <h4 class="section-sub">Historical Flight Incidents</h4>
+            <div id="incidents-list" class="diff-stack"></div>
+            <h4 class="section-sub" style="margin-top:16px;">Terrestrial Fire Safety Spinoffs</h4>
+            <div id="spinoffs-list" class="diff-stack"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
