@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyrosense"
+version = "0.1.0"
+description = "NASA PSI Microgravity Combustion Intelligence & Partial-Gravity PINN Platform"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+    "scikit-learn>=1.3.0",
+    "opencv-python-headless>=4.8.0",
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "boto3>=1.34.0",
+    "requests>=2.31.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

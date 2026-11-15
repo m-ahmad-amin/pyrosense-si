@@ -1,0 +1,84 @@
+{
+  "device_used": "cuda",
+  "gpu_name": "Tesla T4",
+  "total_frames_trained": 3600,
+  "resolution": "256x256",
+  "dataset_breakdown": {
+    "nasa_images": 71,
+    "nasa_video_frames": 634,
+    "augmented_real_frames": 2895,
+    "synthetic_frames": 0
+  },
+  "final_val_miou": 0.9849,
+  "final_val_ce_loss": 0.0177,
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_ce_loss": 0.207,
+      "val_ce_loss": 0.1122,
+      "val_miou": 0.9147
+    },
+    {
+      "epoch": 8,
+      "train_ce_loss": 0.0739,
+      "val_ce_loss": 0.054,
+      "val_miou": 0.954
+    },
+    {
+      "epoch": 16,
+      "train_ce_loss": 0.0505,
+      "val_ce_loss": 0.0467,
+      "val_miou": 0.9528
+    },
+    {
+      "epoch": 24,
+      "train_ce_loss": 0.0445,
+      "val_ce_loss": 0.0393,
+      "val_miou": 0.9606
+    },
+    {
+      "epoch": 32,
+      "train_ce_loss": 0.0404,
+      "val_ce_loss": 0.0322,
+      "val_miou": 0.973
+    },
+    {
+      "epoch": 40,
+      "train_ce_loss": 0.0382,
+      "val_ce_loss": 0.029,
+      "val_miou": 0.9724
+    },
+    {
+      "epoch": 48,
+      "train_ce_loss": 0.0319,
+      "val_ce_loss": 0.0257,
+      "val_miou": 0.9754
+    },
+    {
+      "epoch": 56,
+      "train_ce_loss": 0.0257,
+      "val_ce_loss": 0.0181,
+      "val_miou": 0.9883
+    },
+    {
+      "epoch": 64,
+      "train_ce_loss": 0.0233,
+      "val_ce_loss": 0.0195,
+      "val_miou": 0.9825
+    },
+    {
+      "epoch": 72,
+      "train_ce_loss": 0.0209,
+      "val_ce_loss": 0.0157,
+      "val_miou": 0.9885
+    },
+    {
+      "epoch": 80,
+      "train_ce_loss": 0.0199,
+      "val_ce_loss": 0.0177,
+      "val_miou": 0.9849
+    }
+  ],
+  "segmentation_strip_path": "/assets/frames/unet_segmentation_strip.png",
+  "strip_image_path": "/assets/frames/unet_segmentation_strip.png"
+}

@@ -1,0 +1,143 @@
+{
+  "device_used": "cuda",
+  "gpu_name": "Tesla T4",
+  "epochs": 10000,
+  "collocation_points_per_epoch": 16384,
+  "hidden_dim": 256,
+  "num_res_blocks": 4,
+  "pde_training_history": [
+    {
+      "epoch": 1,
+      "total_pde_loss": 1.52519,
+      "momentum_pde": 0.16301,
+      "energy_radiation_pde": 0.63672,
+      "species_transport_pde": 0.1471
+    },
+    {
+      "epoch": 833,
+      "total_pde_loss": 0.03437,
+      "momentum_pde": 0.00412,
+      "energy_radiation_pde": 0.00862,
+      "species_transport_pde": 0.00366
+    },
+    {
+      "epoch": 1666,
+      "total_pde_loss": 0.022,
+      "momentum_pde": 0.00094,
+      "energy_radiation_pde": 0.00509,
+      "species_transport_pde": 0.00092
+    },
+    {
+      "epoch": 2499,
+      "total_pde_loss": 0.01961,
+      "momentum_pde": 0.00079,
+      "energy_radiation_pde": 0.00449,
+      "species_transport_pde": 0.00052
+    },
+    {
+      "epoch": 3332,
+      "total_pde_loss": 0.01614,
+      "momentum_pde": 0.00065,
+      "energy_radiation_pde": 0.0029,
+      "species_transport_pde": 0.00042
+    },
+    {
+      "epoch": 4165,
+      "total_pde_loss": 0.01804,
+      "momentum_pde": 0.00051,
+      "energy_radiation_pde": 0.00357,
+      "species_transport_pde": 0.00027
+    },
+    {
+      "epoch": 4998,
+      "total_pde_loss": 0.01698,
+      "momentum_pde": 0.00046,
+      "energy_radiation_pde": 0.00283,
+      "species_transport_pde": 0.00022
+    },
+    {
+      "epoch": 5831,
+      "total_pde_loss": 0.01795,
+      "momentum_pde": 0.00035,
+      "energy_radiation_pde": 0.00308,
+      "species_transport_pde": 0.00014
+    },
+    {
+      "epoch": 6664,
+      "total_pde_loss": 0.01579,
+      "momentum_pde": 0.00028,
+      "energy_radiation_pde": 0.00241,
+      "species_transport_pde": 0.00012
+    },
+    {
+      "epoch": 7497,
+      "total_pde_loss": 0.01503,
+      "momentum_pde": 0.00025,
+      "energy_radiation_pde": 0.00215,
+      "species_transport_pde": 8e-05
+    },
+    {
+      "epoch": 8330,
+      "total_pde_loss": 0.01381,
+      "momentum_pde": 0.00018,
+      "energy_radiation_pde": 0.00191,
+      "species_transport_pde": 6e-05
+    },
+    {
+      "epoch": 9163,
+      "total_pde_loss": 0.01414,
+      "momentum_pde": 6e-05,
+      "energy_radiation_pde": 0.00192,
+      "species_transport_pde": 3e-05
+    },
+    {
+      "epoch": 9996,
+      "total_pde_loss": 0.01593,
+      "momentum_pde": 4e-05,
+      "energy_radiation_pde": 0.00213,
+      "species_transport_pde": 4e-05
+    },
+    {
+      "epoch": 10000,
+      "total_pde_loss": 0.01529,
+      "momentum_pde": 4e-05,
+      "energy_radiation_pde": 0.00205,
+      "species_transport_pde": 3e-05
+    }
+  ],
+  "regime_field_summaries": [
+    {
+      "regime_id": "iss_0g",
+      "label": "ISS 0.00g (21% O2, 14.7 psi)",
+      "gravity_g": 0.0,
+      "peak_field_temp_k": 1166.3,
+      "mean_plume_velocity_cms": 22.75,
+      "min_core_o2_mole_fraction": 0.14
+    },
+    {
+      "regime_id": "moon_016g",
+      "label": "Lunar Base 0.16g (34% O2, 10.2 psi)",
+      "gravity_g": 0.16,
+      "peak_field_temp_k": 1574.7,
+      "mean_plume_velocity_cms": 29.19,
+      "min_core_o2_mole_fraction": 0.1822
+    },
+    {
+      "regime_id": "mars_038g",
+      "label": "Mars Habitat 0.38g (30% O2, 10.2 psi)",
+      "gravity_g": 0.38,
+      "peak_field_temp_k": 1503.1,
+      "mean_plume_velocity_cms": 32.81,
+      "min_core_o2_mole_fraction": 0.1684
+    },
+    {
+      "regime_id": "earth_1g",
+      "label": "Earth 1.00g (21% O2, 14.7 psi)",
+      "gravity_g": 1.0,
+      "peak_field_temp_k": 1383.0,
+      "mean_plume_velocity_cms": 46.41,
+      "min_core_o2_mole_fraction": 0.1251
+    }
+  ],
+  "field_heatmap_path": "/assets/frames/pinn_2d_fields.png"
+}

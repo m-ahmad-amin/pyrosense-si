@@ -1,0 +1,3482 @@
+{
+  "device_used": "cuda",
+  "gpu_name": "Tesla T4",
+  "training_history": [
+    {
+      "epoch": 1,
+      "total_loss": 43.88476,
+      "data_loss": 16.42425,
+      "physics_loss": 91.53502
+    },
+    {
+      "epoch": 300,
+      "total_loss": 0.90803,
+      "data_loss": 0.442,
+      "physics_loss": 1.55343
+    },
+    {
+      "epoch": 600,
+      "total_loss": 0.58274,
+      "data_loss": 0.26701,
+      "physics_loss": 1.05244
+    },
+    {
+      "epoch": 900,
+      "total_loss": 0.3711,
+      "data_loss": 0.22292,
+      "physics_loss": 0.49394
+    },
+    {
+      "epoch": 1200,
+      "total_loss": 0.25299,
+      "data_loss": 0.12314,
+      "physics_loss": 0.43284
+    },
+    {
+      "epoch": 1500,
+      "total_loss": 0.21092,
+      "data_loss": 0.10733,
+      "physics_loss": 0.34528
+    },
+    {
+      "epoch": 1800,
+      "total_loss": 0.17709,
+      "data_loss": 0.08545,
+      "physics_loss": 0.30547
+    },
+    {
+      "epoch": 2100,
+      "total_loss": 0.20721,
+      "data_loss": 0.11196,
+      "physics_loss": 0.31749
+    },
+    {
+      "epoch": 2400,
+      "total_loss": 0.17873,
+      "data_loss": 0.08873,
+      "physics_loss": 0.29998
+    },
+    {
+      "epoch": 2500,
+      "total_loss": 0.18853,
+      "data_loss": 0.11788,
+      "physics_loss": 0.23549
+    }
+  ],
+  "validation_metrics": {
+    "flame_spread_mm_s": {
+      "r2": 0.9959,
+      "rmse": 0.1548,
+      "mae": 0.1024
+    },
+    "loi_pct": {
+      "r2": 0.9949,
+      "rmse": 0.24,
+      "mae": 0.1352
+    },
+    "peak_temp_k": {
+      "r2": 0.9734,
+      "rmse": 46.1829,
+      "mae": 24.5119
+    },
+    "radiative_fraction": {
+      "r2": 0.9566,
+      "rmse": 0.0221,
+      "mae": 0.015
+    }
+  },
+  "gravity_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.16,
+    0.25,
+    0.38,
+    0.55,
+    0.75,
+    1.0
+  ],
+  "flow_grid": [
+    0.0,
+    2.0,
+    5.0,
+    8.0,
+    12.0,
+    18.0,
+    25.0,
+    35.0,
+    45.0
+  ],
+  "predictions": {
+    "Sibal_Cotton_Fiberglass": {
+      "iss_21_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 3.414,
+            "flame_spread_ci95": 0.302,
+            "loi_pct": 15.56,
+            "loi_ci95": 0.22,
+            "peak_temp_k": 1724.1,
+            "radiative_fraction": 0.336
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 3.522,
+            "flame_spread_ci95": 0.277,
+            "loi_pct": 15.71,
+            "loi_ci95": 0.21,
+            "peak_temp_k": 1740.9,
+            "radiative_fraction": 0.32
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 3.58,
+            "flame_spread_ci95": 0.306,
+            "loi_pct": 15.81,
+            "loi_ci95": 0.18,
+            "peak_temp_k": 1744.3,
+            "radiative_fraction": 0.308
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 3.528,
+            "flame_spread_ci95": 0.259,
+            "loi_pct": 16.02,
+            "loi_ci95": 0.22,
+            "peak_temp_k": 1748.9,
+            "radiative_fraction": 0.295
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 3.344,
+            "flame_spread_ci95": 0.327,
+            "loi_pct": 16.24,
+            "loi_ci95": 0.2,
+            "peak_temp_k": 1752.2,
+            "radiative_fraction": 0.279
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 3.248,
+            "flame_spread_ci95": 0.356,
+            "loi_pct": 16.51,
+            "loi_ci95": 0.16,
+            "peak_temp_k": 1757.1,
+            "radiative_fraction": 0.261
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 2.982,
+            "flame_spread_ci95": 0.261,
+            "loi_pct": 16.82,
+            "loi_ci95": 0.23,
+            "peak_temp_k": 1770.5,
+            "radiative_fraction": 0.246
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 2.794,
+            "flame_spread_ci95": 0.382,
+            "loi_pct": 17.12,
+            "loi_ci95": 0.26,
+            "peak_temp_k": 1751.6,
+            "radiative_fraction": 0.238
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 2.596,
+            "flame_spread_ci95": 0.33,
+            "loi_pct": 17.41,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 1729.0,
+            "radiative_fraction": 0.238
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 0.769,
+            "spread_lunar_016g": 2.186,
+            "spread_earth_1g": 2.259,
+            "loi_0g": 16.6,
+            "loi_lunar_016g": 16.08,
+            "loi_earth_1g": 17.44
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 1.816,
+            "spread_lunar_016g": 2.789,
+            "spread_earth_1g": 2.368,
+            "loi_0g": 15.88,
+            "loi_lunar_016g": 15.99,
+            "loi_earth_1g": 17.43
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 3.136,
+            "spread_lunar_016g": 3.366,
+            "spread_earth_1g": 2.528,
+            "loi_0g": 15.57,
+            "loi_lunar_016g": 16.0,
+            "loi_earth_1g": 17.43
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 3.893,
+            "spread_lunar_016g": 3.79,
+            "spread_earth_1g": 2.695,
+            "loi_0g": 15.58,
+            "loi_lunar_016g": 16.03,
+            "loi_earth_1g": 17.44
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 4.626,
+            "spread_lunar_016g": 4.324,
+            "spread_earth_1g": 2.949,
+            "loi_0g": 15.66,
+            "loi_lunar_016g": 16.09,
+            "loi_earth_1g": 17.46
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 5.622,
+            "spread_lunar_016g": 5.131,
+            "spread_earth_1g": 3.418,
+            "loi_0g": 15.82,
+            "loi_lunar_016g": 16.23,
+            "loi_earth_1g": 17.52
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 6.465,
+            "spread_lunar_016g": 5.891,
+            "spread_earth_1g": 4.047,
+            "loi_0g": 16.04,
+            "loi_lunar_016g": 16.42,
+            "loi_earth_1g": 17.64
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 6.447,
+            "spread_lunar_016g": 6.02,
+            "spread_earth_1g": 4.782,
+            "loi_0g": 16.48,
+            "loi_lunar_016g": 16.77,
+            "loi_earth_1g": 17.89
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 5.203,
+            "spread_lunar_016g": 4.985,
+            "spread_earth_1g": 4.898,
+            "loi_0g": 16.99,
+            "loi_lunar_016g": 17.2,
+            "loi_earth_1g": 18.15
+          }
+        ]
+      },
+      "lunar_34_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 7.209,
+            "flame_spread_ci95": 0.509,
+            "loi_pct": 13.98,
+            "loi_ci95": 0.27,
+            "peak_temp_k": 2035.9,
+            "radiative_fraction": 0.323
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 7.554,
+            "flame_spread_ci95": 0.52,
+            "loi_pct": 14.14,
+            "loi_ci95": 0.28,
+            "peak_temp_k": 2050.5,
+            "radiative_fraction": 0.309
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 7.862,
+            "flame_spread_ci95": 0.422,
+            "loi_pct": 14.27,
+            "loi_ci95": 0.22,
+            "peak_temp_k": 2055.6,
+            "radiative_fraction": 0.295
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 8.02,
+            "flame_spread_ci95": 0.454,
+            "loi_pct": 14.45,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 2061.3,
+            "radiative_fraction": 0.278
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 8.095,
+            "flame_spread_ci95": 0.488,
+            "loi_pct": 14.7,
+            "loi_ci95": 0.35,
+            "peak_temp_k": 2069.9,
+            "radiative_fraction": 0.256
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 8.062,
+            "flame_spread_ci95": 0.497,
+            "loi_pct": 15.06,
+            "loi_ci95": 0.37,
+            "peak_temp_k": 2070.5,
+            "radiative_fraction": 0.236
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 7.973,
+            "flame_spread_ci95": 0.393,
+            "loi_pct": 15.41,
+            "loi_ci95": 0.29,
+            "peak_temp_k": 2072.2,
+            "radiative_fraction": 0.219
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 7.887,
+            "flame_spread_ci95": 0.363,
+            "loi_pct": 15.65,
+            "loi_ci95": 0.33,
+            "peak_temp_k": 2072.8,
+            "radiative_fraction": 0.203
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 7.817,
+            "flame_spread_ci95": 0.526,
+            "loi_pct": 16.01,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 2072.9,
+            "radiative_fraction": 0.194
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 3.55,
+            "spread_lunar_016g": 5.603,
+            "spread_earth_1g": 6.86,
+            "loi_0g": 14.57,
+            "loi_lunar_016g": 14.6,
+            "loi_earth_1g": 16.13
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 4.91,
+            "spread_lunar_016g": 6.537,
+            "spread_earth_1g": 7.151,
+            "loi_0g": 14.21,
+            "loi_lunar_016g": 14.51,
+            "loi_earth_1g": 16.08
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 6.707,
+            "spread_lunar_016g": 7.644,
+            "spread_earth_1g": 7.587,
+            "loi_0g": 14.01,
+            "loi_lunar_016g": 14.46,
+            "loi_earth_1g": 16.01
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 8.074,
+            "spread_lunar_016g": 8.481,
+            "spread_earth_1g": 8.017,
+            "loi_0g": 13.97,
+            "loi_lunar_016g": 14.48,
+            "loi_earth_1g": 15.93
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 9.279,
+            "spread_lunar_016g": 9.232,
+            "spread_earth_1g": 8.561,
+            "loi_0g": 14.05,
+            "loi_lunar_016g": 14.56,
+            "loi_earth_1g": 15.82
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 10.036,
+            "spread_lunar_016g": 9.67,
+            "spread_earth_1g": 9.242,
+            "loi_0g": 14.32,
+            "loi_lunar_016g": 14.76,
+            "loi_earth_1g": 15.68
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 9.839,
+            "spread_lunar_016g": 9.429,
+            "spread_earth_1g": 9.708,
+            "loi_0g": 14.7,
+            "loi_lunar_016g": 15.05,
+            "loi_earth_1g": 15.56
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 8.586,
+            "spread_lunar_016g": 8.334,
+            "spread_earth_1g": 9.551,
+            "loi_0g": 15.26,
+            "loi_lunar_016g": 15.47,
+            "loi_earth_1g": 15.56
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 6.937,
+            "spread_lunar_016g": 6.84,
+            "spread_earth_1g": 8.408,
+            "loi_0g": 15.8,
+            "loi_lunar_016g": 15.91,
+            "loi_earth_1g": 15.77
+          }
+        ]
+      },
+      "mars_30_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 6.366,
+            "flame_spread_ci95": 0.269,
+            "loi_pct": 14.26,
+            "loi_ci95": 0.17,
+            "peak_temp_k": 1964.4,
+            "radiative_fraction": 0.324
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 6.603,
+            "flame_spread_ci95": 0.282,
+            "loi_pct": 14.39,
+            "loi_ci95": 0.2,
+            "peak_temp_k": 1972.7,
+            "radiative_fraction": 0.309
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 6.729,
+            "flame_spread_ci95": 0.485,
+            "loi_pct": 14.54,
+            "loi_ci95": 0.28,
+            "peak_temp_k": 1987.3,
+            "radiative_fraction": 0.294
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 6.872,
+            "flame_spread_ci95": 0.362,
+            "loi_pct": 14.72,
+            "loi_ci95": 0.15,
+            "peak_temp_k": 1990.0,
+            "radiative_fraction": 0.28
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 6.867,
+            "flame_spread_ci95": 0.392,
+            "loi_pct": 14.94,
+            "loi_ci95": 0.24,
+            "peak_temp_k": 1997.4,
+            "radiative_fraction": 0.262
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 6.774,
+            "flame_spread_ci95": 0.332,
+            "loi_pct": 15.29,
+            "loi_ci95": 0.24,
+            "peak_temp_k": 1996.0,
+            "radiative_fraction": 0.244
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 6.553,
+            "flame_spread_ci95": 0.382,
+            "loi_pct": 15.68,
+            "loi_ci95": 0.32,
+            "peak_temp_k": 2001.1,
+            "radiative_fraction": 0.226
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 6.385,
+            "flame_spread_ci95": 0.386,
+            "loi_pct": 16.02,
+            "loi_ci95": 0.23,
+            "peak_temp_k": 1993.4,
+            "radiative_fraction": 0.212
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 6.219,
+            "flame_spread_ci95": 0.374,
+            "loi_pct": 16.37,
+            "loi_ci95": 0.32,
+            "peak_temp_k": 1989.6,
+            "radiative_fraction": 0.207
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 2.738,
+            "spread_lunar_016g": 4.749,
+            "spread_earth_1g": 5.431,
+            "loi_0g": 15.19,
+            "loi_lunar_016g": 14.9,
+            "loi_earth_1g": 16.47
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 4.159,
+            "spread_lunar_016g": 5.578,
+            "spread_earth_1g": 5.696,
+            "loi_0g": 14.63,
+            "loi_lunar_016g": 14.78,
+            "loi_earth_1g": 16.43
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 5.856,
+            "spread_lunar_016g": 6.537,
+            "spread_earth_1g": 6.109,
+            "loi_0g": 14.32,
+            "loi_lunar_016g": 14.72,
+            "loi_earth_1g": 16.36
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 7.068,
+            "spread_lunar_016g": 7.293,
+            "spread_earth_1g": 6.534,
+            "loi_0g": 14.24,
+            "loi_lunar_016g": 14.72,
+            "loi_earth_1g": 16.28
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 8.176,
+            "spread_lunar_016g": 8.031,
+            "spread_earth_1g": 7.101,
+            "loi_0g": 14.29,
+            "loi_lunar_016g": 14.78,
+            "loi_earth_1g": 16.19
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 8.935,
+            "spread_lunar_016g": 8.535,
+            "spread_earth_1g": 7.852,
+            "loi_0g": 14.51,
+            "loi_lunar_016g": 14.95,
+            "loi_earth_1g": 16.06
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 8.762,
+            "spread_lunar_016g": 8.354,
+            "spread_earth_1g": 8.36,
+            "loi_0g": 14.88,
+            "loi_lunar_016g": 15.23,
+            "loi_earth_1g": 15.99
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 7.444,
+            "spread_lunar_016g": 7.201,
+            "spread_earth_1g": 8.099,
+            "loi_0g": 15.5,
+            "loi_lunar_016g": 15.72,
+            "loi_earth_1g": 16.09
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 5.653,
+            "spread_lunar_016g": 5.541,
+            "spread_earth_1g": 6.848,
+            "loi_0g": 16.12,
+            "loi_lunar_016g": 16.26,
+            "loi_earth_1g": 16.36
+          }
+        ]
+      },
+      "suit_85_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 11.278,
+            "flame_spread_ci95": 1.114,
+            "loi_pct": 11.91,
+            "loi_ci95": 0.62,
+            "peak_temp_k": 2575.5,
+            "radiative_fraction": 0.266
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 11.985,
+            "flame_spread_ci95": 0.969,
+            "loi_pct": 12.93,
+            "loi_ci95": 1.35,
+            "peak_temp_k": 2592.2,
+            "radiative_fraction": 0.271
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 13.038,
+            "flame_spread_ci95": 1.434,
+            "loi_pct": 13.72,
+            "loi_ci95": 1.02,
+            "peak_temp_k": 2607.4,
+            "radiative_fraction": 0.275
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 14.291,
+            "flame_spread_ci95": 1.063,
+            "loi_pct": 14.47,
+            "loi_ci95": 1.07,
+            "peak_temp_k": 2620.0,
+            "radiative_fraction": 0.283
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 16.49,
+            "flame_spread_ci95": 1.55,
+            "loi_pct": 15.5,
+            "loi_ci95": 0.81,
+            "peak_temp_k": 2632.6,
+            "radiative_fraction": 0.276
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 19.069,
+            "flame_spread_ci95": 1.76,
+            "loi_pct": 15.92,
+            "loi_ci95": 0.68,
+            "peak_temp_k": 2644.9,
+            "radiative_fraction": 0.255
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 20.909,
+            "flame_spread_ci95": 2.496,
+            "loi_pct": 16.6,
+            "loi_ci95": 0.89,
+            "peak_temp_k": 2647.5,
+            "radiative_fraction": 0.237
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 22.509,
+            "flame_spread_ci95": 1.896,
+            "loi_pct": 16.49,
+            "loi_ci95": 0.99,
+            "peak_temp_k": 2659.0,
+            "radiative_fraction": 0.212
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 23.071,
+            "flame_spread_ci95": 2.091,
+            "loi_pct": 16.22,
+            "loi_ci95": 0.96,
+            "peak_temp_k": 2655.7,
+            "radiative_fraction": 0.199
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 9.687,
+            "spread_lunar_016g": 11.099,
+            "spread_earth_1g": 22.549,
+            "loi_0g": 10.26,
+            "loi_lunar_016g": 12.1,
+            "loi_earth_1g": 16.46
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 10.048,
+            "spread_lunar_016g": 12.006,
+            "spread_earth_1g": 22.765,
+            "loi_0g": 10.67,
+            "loi_lunar_016g": 12.91,
+            "loi_earth_1g": 16.43
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 10.895,
+            "spread_lunar_016g": 13.683,
+            "spread_earth_1g": 22.94,
+            "loi_0g": 11.6,
+            "loi_lunar_016g": 14.15,
+            "loi_earth_1g": 16.38
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 12.195,
+            "spread_lunar_016g": 15.557,
+            "spread_earth_1g": 22.96,
+            "loi_0g": 12.83,
+            "loi_lunar_016g": 15.13,
+            "loi_earth_1g": 16.33
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 14.473,
+            "spread_lunar_016g": 17.912,
+            "spread_earth_1g": 22.786,
+            "loi_0g": 14.45,
+            "loi_lunar_016g": 15.85,
+            "loi_earth_1g": 16.26
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 17.883,
+            "spread_lunar_016g": 20.299,
+            "spread_earth_1g": 22.192,
+            "loi_0g": 15.74,
+            "loi_lunar_016g": 16.2,
+            "loi_earth_1g": 16.16
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 20.101,
+            "spread_lunar_016g": 21.217,
+            "spread_earth_1g": 21.145,
+            "loi_0g": 16.12,
+            "loi_lunar_016g": 16.26,
+            "loi_earth_1g": 16.06
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 20.146,
+            "spread_lunar_016g": 20.318,
+            "spread_earth_1g": 19.281,
+            "loi_0g": 16.21,
+            "loi_lunar_016g": 16.26,
+            "loi_earth_1g": 15.95
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 18.323,
+            "spread_lunar_016g": 18.187,
+            "spread_earth_1g": 17.264,
+            "loi_0g": 16.26,
+            "loi_lunar_016g": 16.29,
+            "loi_earth_1g": 15.88
+          }
+        ]
+      }
+    },
+    "PMMA_Black": {
+      "iss_21_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 0.685,
+            "flame_spread_ci95": 0.121,
+            "loi_pct": 16.73,
+            "loi_ci95": 0.29,
+            "peak_temp_k": 1731.6,
+            "radiative_fraction": 0.426
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 0.715,
+            "flame_spread_ci95": 0.132,
+            "loi_pct": 16.85,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 1738.3,
+            "radiative_fraction": 0.408
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 0.757,
+            "flame_spread_ci95": 0.1,
+            "loi_pct": 16.91,
+            "loi_ci95": 0.18,
+            "peak_temp_k": 1753.9,
+            "radiative_fraction": 0.386
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 0.771,
+            "flame_spread_ci95": 0.101,
+            "loi_pct": 16.94,
+            "loi_ci95": 0.17,
+            "peak_temp_k": 1761.0,
+            "radiative_fraction": 0.374
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 0.811,
+            "flame_spread_ci95": 0.154,
+            "loi_pct": 17.03,
+            "loi_ci95": 0.24,
+            "peak_temp_k": 1776.3,
+            "radiative_fraction": 0.351
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 0.842,
+            "flame_spread_ci95": 0.106,
+            "loi_pct": 17.12,
+            "loi_ci95": 0.21,
+            "peak_temp_k": 1782.0,
+            "radiative_fraction": 0.328
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 0.885,
+            "flame_spread_ci95": 0.19,
+            "loi_pct": 17.27,
+            "loi_ci95": 0.25,
+            "peak_temp_k": 1801.5,
+            "radiative_fraction": 0.302
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 0.894,
+            "flame_spread_ci95": 0.154,
+            "loi_pct": 17.36,
+            "loi_ci95": 0.23,
+            "peak_temp_k": 1807.5,
+            "radiative_fraction": 0.281
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 0.971,
+            "flame_spread_ci95": 0.154,
+            "loi_pct": 17.51,
+            "loi_ci95": 0.29,
+            "peak_temp_k": 1802.4,
+            "radiative_fraction": 0.278
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 0.621,
+            "spread_lunar_016g": 0.717,
+            "spread_earth_1g": 1.007,
+            "loi_0g": 16.2,
+            "loi_lunar_016g": 16.76,
+            "loi_earth_1g": 17.55
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 0.638,
+            "spread_lunar_016g": 0.738,
+            "spread_earth_1g": 1.001,
+            "loi_0g": 16.44,
+            "loi_lunar_016g": 16.81,
+            "loi_earth_1g": 17.54
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 0.669,
+            "spread_lunar_016g": 0.769,
+            "spread_earth_1g": 0.996,
+            "loi_0g": 16.66,
+            "loi_lunar_016g": 16.91,
+            "loi_earth_1g": 17.53
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 0.721,
+            "spread_lunar_016g": 0.804,
+            "spread_earth_1g": 0.995,
+            "loi_0g": 16.84,
+            "loi_lunar_016g": 17.02,
+            "loi_earth_1g": 17.54
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 0.812,
+            "spread_lunar_016g": 0.862,
+            "spread_earth_1g": 0.999,
+            "loi_0g": 17.06,
+            "loi_lunar_016g": 17.18,
+            "loi_earth_1g": 17.56
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 0.985,
+            "spread_lunar_016g": 0.97,
+            "spread_earth_1g": 1.013,
+            "loi_0g": 17.26,
+            "loi_lunar_016g": 17.33,
+            "loi_earth_1g": 17.63
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 1.163,
+            "spread_lunar_016g": 1.077,
+            "spread_earth_1g": 1.031,
+            "loi_0g": 17.31,
+            "loi_lunar_016g": 17.37,
+            "loi_earth_1g": 17.73
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 1.212,
+            "spread_lunar_016g": 1.092,
+            "spread_earth_1g": 1.034,
+            "loi_0g": 17.24,
+            "loi_lunar_016g": 17.31,
+            "loi_earth_1g": 17.85
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 1.057,
+            "spread_lunar_016g": 0.962,
+            "spread_earth_1g": 0.994,
+            "loi_0g": 17.18,
+            "loi_lunar_016g": 17.25,
+            "loi_earth_1g": 17.96
+          }
+        ]
+      },
+      "lunar_34_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 2.429,
+            "flame_spread_ci95": 0.215,
+            "loi_pct": 14.83,
+            "loi_ci95": 0.23,
+            "peak_temp_k": 2052.6,
+            "radiative_fraction": 0.357
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 2.543,
+            "flame_spread_ci95": 0.204,
+            "loi_pct": 15.03,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 2058.9,
+            "radiative_fraction": 0.342
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 2.498,
+            "flame_spread_ci95": 0.22,
+            "loi_pct": 15.08,
+            "loi_ci95": 0.2,
+            "peak_temp_k": 2067.1,
+            "radiative_fraction": 0.33
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 2.6,
+            "flame_spread_ci95": 0.251,
+            "loi_pct": 15.28,
+            "loi_ci95": 0.24,
+            "peak_temp_k": 2071.0,
+            "radiative_fraction": 0.315
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 2.602,
+            "flame_spread_ci95": 0.205,
+            "loi_pct": 15.52,
+            "loi_ci95": 0.24,
+            "peak_temp_k": 2077.5,
+            "radiative_fraction": 0.298
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 2.553,
+            "flame_spread_ci95": 0.219,
+            "loi_pct": 15.78,
+            "loi_ci95": 0.33,
+            "peak_temp_k": 2079.4,
+            "radiative_fraction": 0.278
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 2.534,
+            "flame_spread_ci95": 0.217,
+            "loi_pct": 16.08,
+            "loi_ci95": 0.27,
+            "peak_temp_k": 2081.2,
+            "radiative_fraction": 0.259
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 2.483,
+            "flame_spread_ci95": 0.252,
+            "loi_pct": 16.17,
+            "loi_ci95": 0.32,
+            "peak_temp_k": 2080.6,
+            "radiative_fraction": 0.246
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 2.555,
+            "flame_spread_ci95": 0.216,
+            "loi_pct": 16.24,
+            "loi_ci95": 0.32,
+            "peak_temp_k": 2074.2,
+            "radiative_fraction": 0.239
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 1.747,
+            "spread_lunar_016g": 2.038,
+            "spread_earth_1g": 2.424,
+            "loi_0g": 14.61,
+            "loi_lunar_016g": 15.2,
+            "loi_earth_1g": 16.39
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 1.946,
+            "spread_lunar_016g": 2.225,
+            "spread_earth_1g": 2.465,
+            "loi_0g": 14.67,
+            "loi_lunar_016g": 15.23,
+            "loi_earth_1g": 16.34
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 2.288,
+            "spread_lunar_016g": 2.493,
+            "spread_earth_1g": 2.524,
+            "loi_0g": 14.78,
+            "loi_lunar_016g": 15.28,
+            "loi_earth_1g": 16.28
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 2.628,
+            "spread_lunar_016g": 2.726,
+            "spread_earth_1g": 2.577,
+            "loi_0g": 14.88,
+            "loi_lunar_016g": 15.34,
+            "loi_earth_1g": 16.22
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 3.002,
+            "spread_lunar_016g": 2.955,
+            "spread_earth_1g": 2.634,
+            "loi_0g": 15.02,
+            "loi_lunar_016g": 15.44,
+            "loi_earth_1g": 16.14
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 3.306,
+            "spread_lunar_016g": 3.12,
+            "spread_earth_1g": 2.68,
+            "loi_0g": 15.24,
+            "loi_lunar_016g": 15.59,
+            "loi_earth_1g": 16.04
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 3.337,
+            "spread_lunar_016g": 3.098,
+            "spread_earth_1g": 2.657,
+            "loi_0g": 15.5,
+            "loi_lunar_016g": 15.76,
+            "loi_earth_1g": 15.95
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 3.016,
+            "spread_lunar_016g": 2.802,
+            "spread_earth_1g": 2.475,
+            "loi_0g": 15.86,
+            "loi_lunar_016g": 16.02,
+            "loi_earth_1g": 15.92
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 2.467,
+            "spread_lunar_016g": 2.316,
+            "spread_earth_1g": 2.162,
+            "loi_0g": 16.24,
+            "loi_lunar_016g": 16.31,
+            "loi_earth_1g": 16.02
+          }
+        ]
+      },
+      "mars_30_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 1.857,
+            "flame_spread_ci95": 0.191,
+            "loi_pct": 14.99,
+            "loi_ci95": 0.19,
+            "peak_temp_k": 1992.4,
+            "radiative_fraction": 0.356
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 1.905,
+            "flame_spread_ci95": 0.218,
+            "loi_pct": 15.12,
+            "loi_ci95": 0.19,
+            "peak_temp_k": 2007.1,
+            "radiative_fraction": 0.34
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 1.979,
+            "flame_spread_ci95": 0.226,
+            "loi_pct": 15.24,
+            "loi_ci95": 0.19,
+            "peak_temp_k": 2011.5,
+            "radiative_fraction": 0.327
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 1.973,
+            "flame_spread_ci95": 0.218,
+            "loi_pct": 15.38,
+            "loi_ci95": 0.21,
+            "peak_temp_k": 2011.3,
+            "radiative_fraction": 0.313
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 2.007,
+            "flame_spread_ci95": 0.234,
+            "loi_pct": 15.61,
+            "loi_ci95": 0.21,
+            "peak_temp_k": 2017.4,
+            "radiative_fraction": 0.299
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 1.964,
+            "flame_spread_ci95": 0.131,
+            "loi_pct": 15.85,
+            "loi_ci95": 0.29,
+            "peak_temp_k": 2020.3,
+            "radiative_fraction": 0.281
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 1.916,
+            "flame_spread_ci95": 0.209,
+            "loi_pct": 16.13,
+            "loi_ci95": 0.25,
+            "peak_temp_k": 2020.3,
+            "radiative_fraction": 0.264
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 1.875,
+            "flame_spread_ci95": 0.187,
+            "loi_pct": 16.26,
+            "loi_ci95": 0.25,
+            "peak_temp_k": 2016.2,
+            "radiative_fraction": 0.251
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 1.957,
+            "flame_spread_ci95": 0.194,
+            "loi_pct": 16.37,
+            "loi_ci95": 0.27,
+            "peak_temp_k": 2012.5,
+            "radiative_fraction": 0.244
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 1.448,
+            "spread_lunar_016g": 1.631,
+            "spread_earth_1g": 1.873,
+            "loi_0g": 14.73,
+            "loi_lunar_016g": 15.27,
+            "loi_earth_1g": 16.48
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 1.567,
+            "spread_lunar_016g": 1.742,
+            "spread_earth_1g": 1.895,
+            "loi_0g": 14.82,
+            "loi_lunar_016g": 15.31,
+            "loi_earth_1g": 16.45
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 1.768,
+            "spread_lunar_016g": 1.922,
+            "spread_earth_1g": 1.929,
+            "loi_0g": 14.95,
+            "loi_lunar_016g": 15.37,
+            "loi_earth_1g": 16.39
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 2.01,
+            "spread_lunar_016g": 2.092,
+            "spread_earth_1g": 1.963,
+            "loi_0g": 15.05,
+            "loi_lunar_016g": 15.44,
+            "loi_earth_1g": 16.34
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 2.307,
+            "spread_lunar_016g": 2.267,
+            "spread_earth_1g": 2.001,
+            "loi_0g": 15.18,
+            "loi_lunar_016g": 15.54,
+            "loi_earth_1g": 16.28
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 2.554,
+            "spread_lunar_016g": 2.391,
+            "spread_earth_1g": 2.028,
+            "loi_0g": 15.4,
+            "loi_lunar_016g": 15.7,
+            "loi_earth_1g": 16.2
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 2.566,
+            "spread_lunar_016g": 2.357,
+            "spread_earth_1g": 1.993,
+            "loi_0g": 15.66,
+            "loi_lunar_016g": 15.89,
+            "loi_earth_1g": 16.14
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 2.274,
+            "spread_lunar_016g": 2.086,
+            "spread_earth_1g": 1.822,
+            "loi_0g": 16.04,
+            "loi_lunar_016g": 16.18,
+            "loi_earth_1g": 16.14
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 1.807,
+            "spread_lunar_016g": 1.678,
+            "spread_earth_1g": 1.573,
+            "loi_0g": 16.42,
+            "loi_lunar_016g": 16.47,
+            "loi_earth_1g": 16.27
+          }
+        ]
+      },
+      "suit_85_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 5.69,
+            "flame_spread_ci95": 0.49,
+            "loi_pct": 13.54,
+            "loi_ci95": 0.77,
+            "peak_temp_k": 2580.8,
+            "radiative_fraction": 0.312
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 5.872,
+            "flame_spread_ci95": 0.614,
+            "loi_pct": 14.31,
+            "loi_ci95": 0.85,
+            "peak_temp_k": 2593.6,
+            "radiative_fraction": 0.296
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 6.061,
+            "flame_spread_ci95": 0.49,
+            "loi_pct": 14.76,
+            "loi_ci95": 1.12,
+            "peak_temp_k": 2604.5,
+            "radiative_fraction": 0.28
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 6.223,
+            "flame_spread_ci95": 0.567,
+            "loi_pct": 15.31,
+            "loi_ci95": 1.01,
+            "peak_temp_k": 2609.6,
+            "radiative_fraction": 0.271
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 6.93,
+            "flame_spread_ci95": 0.704,
+            "loi_pct": 15.84,
+            "loi_ci95": 0.86,
+            "peak_temp_k": 2633.7,
+            "radiative_fraction": 0.246
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 7.592,
+            "flame_spread_ci95": 0.665,
+            "loi_pct": 16.67,
+            "loi_ci95": 0.74,
+            "peak_temp_k": 2651.5,
+            "radiative_fraction": 0.224
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 8.545,
+            "flame_spread_ci95": 0.638,
+            "loi_pct": 16.88,
+            "loi_ci95": 0.84,
+            "peak_temp_k": 2656.6,
+            "radiative_fraction": 0.201
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 8.92,
+            "flame_spread_ci95": 1.038,
+            "loi_pct": 17.05,
+            "loi_ci95": 0.84,
+            "peak_temp_k": 2658.9,
+            "radiative_fraction": 0.184
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 8.95,
+            "flame_spread_ci95": 0.871,
+            "loi_pct": 17.17,
+            "loi_ci95": 0.9,
+            "peak_temp_k": 2656.6,
+            "radiative_fraction": 0.172
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 5.776,
+            "spread_lunar_016g": 5.631,
+            "spread_earth_1g": 8.675,
+            "loi_0g": 11.97,
+            "loi_lunar_016g": 13.81,
+            "loi_earth_1g": 16.96
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 5.677,
+            "spread_lunar_016g": 5.759,
+            "spread_earth_1g": 8.78,
+            "loi_0g": 12.49,
+            "loi_lunar_016g": 14.35,
+            "loi_earth_1g": 16.96
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 5.652,
+            "spread_lunar_016g": 6.107,
+            "spread_earth_1g": 8.88,
+            "loi_0g": 13.36,
+            "loi_lunar_016g": 15.1,
+            "loi_earth_1g": 16.96
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 5.818,
+            "spread_lunar_016g": 6.601,
+            "spread_earth_1g": 8.915,
+            "loi_0g": 14.22,
+            "loi_lunar_016g": 15.71,
+            "loi_earth_1g": 16.95
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 6.33,
+            "spread_lunar_016g": 7.347,
+            "spread_earth_1g": 8.88,
+            "loi_0g": 15.24,
+            "loi_lunar_016g": 16.3,
+            "loi_earth_1g": 16.94
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 7.386,
+            "spread_lunar_016g": 8.267,
+            "spread_earth_1g": 8.686,
+            "loi_0g": 16.24,
+            "loi_lunar_016g": 16.76,
+            "loi_earth_1g": 16.92
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 8.271,
+            "spread_lunar_016g": 8.709,
+            "spread_earth_1g": 8.314,
+            "loi_0g": 16.76,
+            "loi_lunar_016g": 16.98,
+            "loi_earth_1g": 16.91
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 8.349,
+            "spread_lunar_016g": 8.37,
+            "spread_earth_1g": 7.629,
+            "loi_0g": 17.06,
+            "loi_lunar_016g": 17.16,
+            "loi_earth_1g": 16.92
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 7.572,
+            "spread_lunar_016g": 7.459,
+            "spread_earth_1g": 6.857,
+            "loi_0g": 17.29,
+            "loi_lunar_016g": 17.34,
+            "loi_earth_1g": 16.95
+          }
+        ]
+      }
+    },
+    "PMMA_Clear": {
+      "iss_21_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 0.381,
+            "flame_spread_ci95": 0.085,
+            "loi_pct": 17.32,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 1684.3,
+            "radiative_fraction": 0.471
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 0.393,
+            "flame_spread_ci95": 0.098,
+            "loi_pct": 17.4,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 1692.1,
+            "radiative_fraction": 0.452
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 0.427,
+            "flame_spread_ci95": 0.093,
+            "loi_pct": 17.49,
+            "loi_ci95": 0.28,
+            "peak_temp_k": 1703.2,
+            "radiative_fraction": 0.437
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 0.444,
+            "flame_spread_ci95": 0.094,
+            "loi_pct": 17.64,
+            "loi_ci95": 0.26,
+            "peak_temp_k": 1707.7,
+            "radiative_fraction": 0.422
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 0.464,
+            "flame_spread_ci95": 0.115,
+            "loi_pct": 17.69,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 1725.7,
+            "radiative_fraction": 0.397
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 0.485,
+            "flame_spread_ci95": 0.152,
+            "loi_pct": 17.77,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 1739.7,
+            "radiative_fraction": 0.363
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 0.545,
+            "flame_spread_ci95": 0.112,
+            "loi_pct": 17.85,
+            "loi_ci95": 0.29,
+            "peak_temp_k": 1758.9,
+            "radiative_fraction": 0.331
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 0.606,
+            "flame_spread_ci95": 0.117,
+            "loi_pct": 17.88,
+            "loi_ci95": 0.35,
+            "peak_temp_k": 1776.5,
+            "radiative_fraction": 0.31
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 0.687,
+            "flame_spread_ci95": 0.144,
+            "loi_pct": 17.99,
+            "loi_ci95": 0.36,
+            "peak_temp_k": 1776.3,
+            "radiative_fraction": 0.296
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 0.356,
+            "spread_lunar_016g": 0.42,
+            "spread_earth_1g": 0.713,
+            "loi_0g": 16.68,
+            "loi_lunar_016g": 17.34,
+            "loi_earth_1g": 18.0
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 0.376,
+            "spread_lunar_016g": 0.429,
+            "spread_earth_1g": 0.704,
+            "loi_0g": 16.93,
+            "loi_lunar_016g": 17.41,
+            "loi_earth_1g": 17.98
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 0.384,
+            "spread_lunar_016g": 0.436,
+            "spread_earth_1g": 0.692,
+            "loi_0g": 17.21,
+            "loi_lunar_016g": 17.54,
+            "loi_earth_1g": 17.96
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 0.392,
+            "spread_lunar_016g": 0.441,
+            "spread_earth_1g": 0.681,
+            "loi_0g": 17.45,
+            "loi_lunar_016g": 17.69,
+            "loi_earth_1g": 17.95
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 0.409,
+            "spread_lunar_016g": 0.453,
+            "spread_earth_1g": 0.67,
+            "loi_0g": 17.76,
+            "loi_lunar_016g": 17.9,
+            "loi_earth_1g": 17.96
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 0.461,
+            "spread_lunar_016g": 0.489,
+            "spread_earth_1g": 0.66,
+            "loi_0g": 18.11,
+            "loi_lunar_016g": 18.13,
+            "loi_earth_1g": 17.99
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 0.545,
+            "spread_lunar_016g": 0.544,
+            "spread_earth_1g": 0.656,
+            "loi_0g": 18.23,
+            "loi_lunar_016g": 18.2,
+            "loi_earth_1g": 18.04
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 0.613,
+            "spread_lunar_016g": 0.584,
+            "spread_earth_1g": 0.654,
+            "loi_0g": 18.06,
+            "loi_lunar_016g": 18.03,
+            "loi_earth_1g": 18.1
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 0.572,
+            "spread_lunar_016g": 0.547,
+            "spread_earth_1g": 0.641,
+            "loi_0g": 17.78,
+            "loi_lunar_016g": 17.78,
+            "loi_earth_1g": 18.15
+          }
+        ]
+      },
+      "lunar_34_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 1.951,
+            "flame_spread_ci95": 0.188,
+            "loi_pct": 15.01,
+            "loi_ci95": 0.28,
+            "peak_temp_k": 2039.7,
+            "radiative_fraction": 0.366
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 2.025,
+            "flame_spread_ci95": 0.226,
+            "loi_pct": 15.22,
+            "loi_ci95": 0.27,
+            "peak_temp_k": 2042.5,
+            "radiative_fraction": 0.351
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 2.124,
+            "flame_spread_ci95": 0.176,
+            "loi_pct": 15.42,
+            "loi_ci95": 0.23,
+            "peak_temp_k": 2044.3,
+            "radiative_fraction": 0.338
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 2.163,
+            "flame_spread_ci95": 0.247,
+            "loi_pct": 15.59,
+            "loi_ci95": 0.34,
+            "peak_temp_k": 2051.5,
+            "radiative_fraction": 0.326
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 2.168,
+            "flame_spread_ci95": 0.211,
+            "loi_pct": 15.81,
+            "loi_ci95": 0.34,
+            "peak_temp_k": 2052.7,
+            "radiative_fraction": 0.308
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 2.122,
+            "flame_spread_ci95": 0.231,
+            "loi_pct": 16.11,
+            "loi_ci95": 0.28,
+            "peak_temp_k": 2053.3,
+            "radiative_fraction": 0.29
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 2.09,
+            "flame_spread_ci95": 0.193,
+            "loi_pct": 16.42,
+            "loi_ci95": 0.27,
+            "peak_temp_k": 2055.4,
+            "radiative_fraction": 0.271
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 2.097,
+            "flame_spread_ci95": 0.192,
+            "loi_pct": 16.55,
+            "loi_ci95": 0.42,
+            "peak_temp_k": 2058.9,
+            "radiative_fraction": 0.257
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 2.11,
+            "flame_spread_ci95": 0.153,
+            "loi_pct": 16.62,
+            "loi_ci95": 0.25,
+            "peak_temp_k": 2054.9,
+            "radiative_fraction": 0.25
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 1.446,
+            "spread_lunar_016g": 1.701,
+            "spread_earth_1g": 2.034,
+            "loi_0g": 14.77,
+            "loi_lunar_016g": 15.42,
+            "loi_earth_1g": 16.74
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 1.592,
+            "spread_lunar_016g": 1.858,
+            "spread_earth_1g": 2.048,
+            "loi_0g": 14.86,
+            "loi_lunar_016g": 15.46,
+            "loi_earth_1g": 16.7
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 1.871,
+            "spread_lunar_016g": 2.076,
+            "spread_earth_1g": 2.064,
+            "loi_0g": 15.0,
+            "loi_lunar_016g": 15.53,
+            "loi_earth_1g": 16.65
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 2.152,
+            "spread_lunar_016g": 2.259,
+            "spread_earth_1g": 2.076,
+            "loi_0g": 15.1,
+            "loi_lunar_016g": 15.6,
+            "loi_earth_1g": 16.59
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 2.458,
+            "spread_lunar_016g": 2.434,
+            "spread_earth_1g": 2.083,
+            "loi_0g": 15.25,
+            "loi_lunar_016g": 15.72,
+            "loi_earth_1g": 16.52
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 2.694,
+            "spread_lunar_016g": 2.543,
+            "spread_earth_1g": 2.073,
+            "loi_0g": 15.5,
+            "loi_lunar_016g": 15.89,
+            "loi_earth_1g": 16.41
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 2.674,
+            "spread_lunar_016g": 2.476,
+            "spread_earth_1g": 2.02,
+            "loi_0g": 15.79,
+            "loi_lunar_016g": 16.08,
+            "loi_earth_1g": 16.31
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 2.314,
+            "spread_lunar_016g": 2.144,
+            "spread_earth_1g": 1.854,
+            "loi_0g": 16.18,
+            "loi_lunar_016g": 16.35,
+            "loi_earth_1g": 16.22
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 1.801,
+            "spread_lunar_016g": 1.689,
+            "spread_earth_1g": 1.59,
+            "loi_0g": 16.56,
+            "loi_lunar_016g": 16.63,
+            "loi_earth_1g": 16.27
+          }
+        ]
+      },
+      "mars_30_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 1.37,
+            "flame_spread_ci95": 0.18,
+            "loi_pct": 15.32,
+            "loi_ci95": 0.16,
+            "peak_temp_k": 1962.9,
+            "radiative_fraction": 0.378
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 1.489,
+            "flame_spread_ci95": 0.195,
+            "loi_pct": 15.45,
+            "loi_ci95": 0.26,
+            "peak_temp_k": 1972.2,
+            "radiative_fraction": 0.36
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 1.518,
+            "flame_spread_ci95": 0.175,
+            "loi_pct": 15.6,
+            "loi_ci95": 0.24,
+            "peak_temp_k": 1977.0,
+            "radiative_fraction": 0.346
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 1.594,
+            "flame_spread_ci95": 0.217,
+            "loi_pct": 15.75,
+            "loi_ci95": 0.27,
+            "peak_temp_k": 1979.4,
+            "radiative_fraction": 0.333
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 1.572,
+            "flame_spread_ci95": 0.193,
+            "loi_pct": 15.9,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 1985.0,
+            "radiative_fraction": 0.315
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 1.574,
+            "flame_spread_ci95": 0.182,
+            "loi_pct": 16.19,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 1991.8,
+            "radiative_fraction": 0.295
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 1.53,
+            "flame_spread_ci95": 0.132,
+            "loi_pct": 16.43,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 1994.8,
+            "radiative_fraction": 0.276
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 1.501,
+            "flame_spread_ci95": 0.116,
+            "loi_pct": 16.61,
+            "loi_ci95": 0.28,
+            "peak_temp_k": 1990.3,
+            "radiative_fraction": 0.266
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 1.544,
+            "flame_spread_ci95": 0.135,
+            "loi_pct": 16.72,
+            "loi_ci95": 0.36,
+            "peak_temp_k": 1987.6,
+            "radiative_fraction": 0.255
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 1.181,
+            "spread_lunar_016g": 1.314,
+            "spread_earth_1g": 1.551,
+            "loi_0g": 14.83,
+            "loi_lunar_016g": 15.56,
+            "loi_earth_1g": 16.81
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 1.237,
+            "spread_lunar_016g": 1.396,
+            "spread_earth_1g": 1.548,
+            "loi_0g": 15.03,
+            "loi_lunar_016g": 15.62,
+            "loi_earth_1g": 16.78
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 1.37,
+            "spread_lunar_016g": 1.525,
+            "spread_earth_1g": 1.545,
+            "loi_0g": 15.24,
+            "loi_lunar_016g": 15.69,
+            "loi_earth_1g": 16.73
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 1.547,
+            "spread_lunar_016g": 1.649,
+            "spread_earth_1g": 1.543,
+            "loi_0g": 15.36,
+            "loi_lunar_016g": 15.77,
+            "loi_earth_1g": 16.68
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 1.776,
+            "spread_lunar_016g": 1.782,
+            "spread_earth_1g": 1.539,
+            "loi_0g": 15.5,
+            "loi_lunar_016g": 15.87,
+            "loi_earth_1g": 16.62
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 1.984,
+            "spread_lunar_016g": 1.882,
+            "spread_earth_1g": 1.527,
+            "loi_0g": 15.71,
+            "loi_lunar_016g": 16.02,
+            "loi_earth_1g": 16.52
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 1.993,
+            "spread_lunar_016g": 1.843,
+            "spread_earth_1g": 1.491,
+            "loi_0g": 15.96,
+            "loi_lunar_016g": 16.2,
+            "loi_earth_1g": 16.43
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 1.711,
+            "spread_lunar_016g": 1.581,
+            "spread_earth_1g": 1.378,
+            "loi_0g": 16.32,
+            "loi_lunar_016g": 16.46,
+            "loi_earth_1g": 16.36
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 1.3,
+            "spread_lunar_016g": 1.221,
+            "spread_earth_1g": 1.193,
+            "loi_0g": 16.68,
+            "loi_lunar_016g": 16.73,
+            "loi_earth_1g": 16.41
+          }
+        ]
+      },
+      "suit_85_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 5.01,
+            "flame_spread_ci95": 0.51,
+            "loi_pct": 14.09,
+            "loi_ci95": 0.88,
+            "peak_temp_k": 2589.5,
+            "radiative_fraction": 0.305
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 5.086,
+            "flame_spread_ci95": 0.528,
+            "loi_pct": 14.64,
+            "loi_ci95": 0.87,
+            "peak_temp_k": 2592.4,
+            "radiative_fraction": 0.295
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 5.213,
+            "flame_spread_ci95": 0.523,
+            "loi_pct": 15.08,
+            "loi_ci95": 0.94,
+            "peak_temp_k": 2605.3,
+            "radiative_fraction": 0.271
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 5.47,
+            "flame_spread_ci95": 0.515,
+            "loi_pct": 15.88,
+            "loi_ci95": 0.99,
+            "peak_temp_k": 2616.7,
+            "radiative_fraction": 0.261
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 5.804,
+            "flame_spread_ci95": 0.754,
+            "loi_pct": 16.44,
+            "loi_ci95": 0.83,
+            "peak_temp_k": 2619.9,
+            "radiative_fraction": 0.244
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 6.515,
+            "flame_spread_ci95": 0.643,
+            "loi_pct": 16.87,
+            "loi_ci95": 0.71,
+            "peak_temp_k": 2643.5,
+            "radiative_fraction": 0.219
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 7.22,
+            "flame_spread_ci95": 0.861,
+            "loi_pct": 17.28,
+            "loi_ci95": 0.74,
+            "peak_temp_k": 2657.0,
+            "radiative_fraction": 0.196
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 7.471,
+            "flame_spread_ci95": 0.674,
+            "loi_pct": 17.47,
+            "loi_ci95": 0.65,
+            "peak_temp_k": 2653.5,
+            "radiative_fraction": 0.182
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 7.549,
+            "flame_spread_ci95": 0.557,
+            "loi_pct": 17.31,
+            "loi_ci95": 0.83,
+            "peak_temp_k": 2657.1,
+            "radiative_fraction": 0.169
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 5.163,
+            "spread_lunar_016g": 4.918,
+            "spread_earth_1g": 7.339,
+            "loi_0g": 12.44,
+            "loi_lunar_016g": 14.38,
+            "loi_earth_1g": 17.47
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 5.033,
+            "spread_lunar_016g": 4.997,
+            "spread_earth_1g": 7.422,
+            "loi_0g": 12.99,
+            "loi_lunar_016g": 14.91,
+            "loi_earth_1g": 17.46
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 4.953,
+            "spread_lunar_016g": 5.254,
+            "spread_earth_1g": 7.497,
+            "loi_0g": 13.89,
+            "loi_lunar_016g": 15.62,
+            "loi_earth_1g": 17.45
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 5.045,
+            "spread_lunar_016g": 5.64,
+            "spread_earth_1g": 7.519,
+            "loi_0g": 14.75,
+            "loi_lunar_016g": 16.19,
+            "loi_earth_1g": 17.44
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 5.426,
+            "spread_lunar_016g": 6.234,
+            "spread_earth_1g": 7.477,
+            "loi_0g": 15.71,
+            "loi_lunar_016g": 16.73,
+            "loi_earth_1g": 17.43
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 6.257,
+            "spread_lunar_016g": 6.97,
+            "spread_earth_1g": 7.295,
+            "loi_0g": 16.65,
+            "loi_lunar_016g": 17.17,
+            "loi_earth_1g": 17.42
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 6.956,
+            "spread_lunar_016g": 7.317,
+            "spread_earth_1g": 6.959,
+            "loi_0g": 17.15,
+            "loi_lunar_016g": 17.4,
+            "loi_earth_1g": 17.41
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 6.995,
+            "spread_lunar_016g": 7.013,
+            "spread_earth_1g": 6.35,
+            "loi_0g": 17.46,
+            "loi_lunar_016g": 17.59,
+            "loi_earth_1g": 17.41
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 6.322,
+            "spread_lunar_016g": 6.226,
+            "spread_earth_1g": 5.672,
+            "loi_0g": 17.7,
+            "loi_lunar_016g": 17.77,
+            "loi_earth_1g": 17.43
+          }
+        ]
+      }
+    },
+    "Nomex_HT90": {
+      "iss_21_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 0.017,
+            "flame_spread_ci95": 0.045,
+            "loi_pct": 26.82,
+            "loi_ci95": 0.67,
+            "peak_temp_k": 1168.9,
+            "radiative_fraction": 0.623
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 0.011,
+            "flame_spread_ci95": 0.01,
+            "loi_pct": 26.87,
+            "loi_ci95": 0.54,
+            "peak_temp_k": 1189.5,
+            "radiative_fraction": 0.609
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 0.014,
+            "flame_spread_ci95": 0.014,
+            "loi_pct": 26.77,
+            "loi_ci95": 0.62,
+            "peak_temp_k": 1219.2,
+            "radiative_fraction": 0.593
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 0.016,
+            "flame_spread_ci95": 0.011,
+            "loi_pct": 26.94,
+            "loi_ci95": 0.45,
+            "peak_temp_k": 1243.3,
+            "radiative_fraction": 0.576
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 0.019,
+            "flame_spread_ci95": 0.017,
+            "loi_pct": 26.84,
+            "loi_ci95": 0.62,
+            "peak_temp_k": 1295.0,
+            "radiative_fraction": 0.546
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 0.024,
+            "flame_spread_ci95": 0.041,
+            "loi_pct": 26.97,
+            "loi_ci95": 0.53,
+            "peak_temp_k": 1347.0,
+            "radiative_fraction": 0.507
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 0.034,
+            "flame_spread_ci95": 0.033,
+            "loi_pct": 27.02,
+            "loi_ci95": 0.53,
+            "peak_temp_k": 1419.2,
+            "radiative_fraction": 0.468
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 0.036,
+            "flame_spread_ci95": 0.023,
+            "loi_pct": 27.19,
+            "loi_ci95": 0.64,
+            "peak_temp_k": 1461.6,
+            "radiative_fraction": 0.431
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 0.06,
+            "flame_spread_ci95": 0.071,
+            "loi_pct": 27.34,
+            "loi_ci95": 0.5,
+            "peak_temp_k": 1498.0,
+            "radiative_fraction": 0.418
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 0.004,
+            "spread_lunar_016g": 0.007,
+            "spread_earth_1g": 0.049,
+            "loi_0g": 26.93,
+            "loi_lunar_016g": 26.91,
+            "loi_earth_1g": 27.22
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 0.005,
+            "spread_lunar_016g": 0.009,
+            "spread_earth_1g": 0.051,
+            "loi_0g": 26.88,
+            "loi_lunar_016g": 26.91,
+            "loi_earth_1g": 27.26
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 0.008,
+            "spread_lunar_016g": 0.013,
+            "spread_earth_1g": 0.054,
+            "loi_0g": 26.84,
+            "loi_lunar_016g": 26.9,
+            "loi_earth_1g": 27.33
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 0.013,
+            "spread_lunar_016g": 0.017,
+            "spread_earth_1g": 0.058,
+            "loi_0g": 26.8,
+            "loi_lunar_016g": 26.87,
+            "loi_earth_1g": 27.4
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 0.022,
+            "spread_lunar_016g": 0.025,
+            "spread_earth_1g": 0.063,
+            "loi_0g": 26.71,
+            "loi_lunar_016g": 26.81,
+            "loi_earth_1g": 27.51
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 0.039,
+            "spread_lunar_016g": 0.041,
+            "spread_earth_1g": 0.073,
+            "loi_0g": 26.55,
+            "loi_lunar_016g": 26.69,
+            "loi_earth_1g": 27.66
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 0.065,
+            "spread_lunar_016g": 0.062,
+            "spread_earth_1g": 0.089,
+            "loi_0g": 26.34,
+            "loi_lunar_016g": 26.55,
+            "loi_earth_1g": 27.85
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 0.096,
+            "spread_lunar_016g": 0.089,
+            "spread_earth_1g": 0.114,
+            "loi_0g": 26.12,
+            "loi_lunar_016g": 26.42,
+            "loi_earth_1g": 28.1
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 0.114,
+            "spread_lunar_016g": 0.105,
+            "spread_earth_1g": 0.138,
+            "loi_0g": 26.04,
+            "loi_lunar_016g": 26.39,
+            "loi_earth_1g": 28.34
+          }
+        ]
+      },
+      "lunar_34_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 1.23,
+            "flame_spread_ci95": 0.243,
+            "loi_pct": 25.39,
+            "loi_ci95": 0.47,
+            "peak_temp_k": 1910.8,
+            "radiative_fraction": 0.37
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 1.256,
+            "flame_spread_ci95": 0.276,
+            "loi_pct": 25.47,
+            "loi_ci95": 0.52,
+            "peak_temp_k": 1913.7,
+            "radiative_fraction": 0.356
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 1.294,
+            "flame_spread_ci95": 0.223,
+            "loi_pct": 25.56,
+            "loi_ci95": 0.58,
+            "peak_temp_k": 1923.6,
+            "radiative_fraction": 0.349
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 1.328,
+            "flame_spread_ci95": 0.223,
+            "loi_pct": 25.63,
+            "loi_ci95": 0.58,
+            "peak_temp_k": 1920.4,
+            "radiative_fraction": 0.336
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 1.297,
+            "flame_spread_ci95": 0.241,
+            "loi_pct": 25.88,
+            "loi_ci95": 0.56,
+            "peak_temp_k": 1924.7,
+            "radiative_fraction": 0.32
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 1.34,
+            "flame_spread_ci95": 0.243,
+            "loi_pct": 26.11,
+            "loi_ci95": 0.6,
+            "peak_temp_k": 1926.8,
+            "radiative_fraction": 0.306
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 1.293,
+            "flame_spread_ci95": 0.225,
+            "loi_pct": 26.27,
+            "loi_ci95": 0.57,
+            "peak_temp_k": 1937.2,
+            "radiative_fraction": 0.286
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 1.273,
+            "flame_spread_ci95": 0.174,
+            "loi_pct": 26.77,
+            "loi_ci95": 0.68,
+            "peak_temp_k": 1928.3,
+            "radiative_fraction": 0.281
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 1.291,
+            "flame_spread_ci95": 0.242,
+            "loi_pct": 27.07,
+            "loi_ci95": 0.58,
+            "peak_temp_k": 1910.9,
+            "radiative_fraction": 0.286
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 0.645,
+            "spread_lunar_016g": 0.937,
+            "spread_earth_1g": 1.216,
+            "loi_0g": 25.26,
+            "loi_lunar_016g": 25.71,
+            "loi_earth_1g": 27.07
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 0.853,
+            "spread_lunar_016g": 1.079,
+            "spread_earth_1g": 1.252,
+            "loi_0g": 25.28,
+            "loi_lunar_016g": 25.71,
+            "loi_earth_1g": 27.07
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 1.138,
+            "spread_lunar_016g": 1.256,
+            "spread_earth_1g": 1.298,
+            "loi_0g": 25.31,
+            "loi_lunar_016g": 25.69,
+            "loi_earth_1g": 27.07
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 1.36,
+            "spread_lunar_016g": 1.384,
+            "spread_earth_1g": 1.333,
+            "loi_0g": 25.33,
+            "loi_lunar_016g": 25.68,
+            "loi_earth_1g": 27.07
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 1.551,
+            "spread_lunar_016g": 1.486,
+            "spread_earth_1g": 1.364,
+            "loi_0g": 25.33,
+            "loi_lunar_016g": 25.66,
+            "loi_earth_1g": 27.07
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 1.651,
+            "spread_lunar_016g": 1.524,
+            "spread_earth_1g": 1.378,
+            "loi_0g": 25.33,
+            "loi_lunar_016g": 25.65,
+            "loi_earth_1g": 27.08
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 1.593,
+            "spread_lunar_016g": 1.46,
+            "spread_earth_1g": 1.35,
+            "loi_0g": 25.35,
+            "loi_lunar_016g": 25.65,
+            "loi_earth_1g": 27.1
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 1.375,
+            "spread_lunar_016g": 1.275,
+            "spread_earth_1g": 1.246,
+            "loi_0g": 25.38,
+            "loi_lunar_016g": 25.66,
+            "loi_earth_1g": 27.17
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 1.121,
+            "spread_lunar_016g": 1.059,
+            "spread_earth_1g": 1.091,
+            "loi_0g": 25.44,
+            "loi_lunar_016g": 25.7,
+            "loi_earth_1g": 27.27
+          }
+        ]
+      },
+      "mars_30_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 0.784,
+            "flame_spread_ci95": 0.17,
+            "loi_pct": 25.83,
+            "loi_ci95": 0.43,
+            "peak_temp_k": 1769.2,
+            "radiative_fraction": 0.409
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 0.871,
+            "flame_spread_ci95": 0.199,
+            "loi_pct": 25.8,
+            "loi_ci95": 0.49,
+            "peak_temp_k": 1790.3,
+            "radiative_fraction": 0.394
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 0.86,
+            "flame_spread_ci95": 0.195,
+            "loi_pct": 25.84,
+            "loi_ci95": 0.7,
+            "peak_temp_k": 1786.6,
+            "radiative_fraction": 0.384
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 0.865,
+            "flame_spread_ci95": 0.231,
+            "loi_pct": 25.91,
+            "loi_ci95": 0.62,
+            "peak_temp_k": 1794.2,
+            "radiative_fraction": 0.372
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 0.882,
+            "flame_spread_ci95": 0.194,
+            "loi_pct": 26.26,
+            "loi_ci95": 0.5,
+            "peak_temp_k": 1806.4,
+            "radiative_fraction": 0.343
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 0.875,
+            "flame_spread_ci95": 0.144,
+            "loi_pct": 26.25,
+            "loi_ci95": 0.72,
+            "peak_temp_k": 1825.2,
+            "radiative_fraction": 0.325
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 0.858,
+            "flame_spread_ci95": 0.185,
+            "loi_pct": 26.68,
+            "loi_ci95": 0.5,
+            "peak_temp_k": 1827.7,
+            "radiative_fraction": 0.307
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 0.846,
+            "flame_spread_ci95": 0.238,
+            "loi_pct": 27.02,
+            "loi_ci95": 0.62,
+            "peak_temp_k": 1832.2,
+            "radiative_fraction": 0.295
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 0.856,
+            "flame_spread_ci95": 0.213,
+            "loi_pct": 27.39,
+            "loi_ci95": 0.64,
+            "peak_temp_k": 1823.7,
+            "radiative_fraction": 0.3
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 0.409,
+            "spread_lunar_016g": 0.601,
+            "spread_earth_1g": 0.81,
+            "loi_0g": 25.75,
+            "loi_lunar_016g": 26.09,
+            "loi_earth_1g": 27.3
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 0.557,
+            "spread_lunar_016g": 0.699,
+            "spread_earth_1g": 0.836,
+            "loi_0g": 25.73,
+            "loi_lunar_016g": 26.06,
+            "loi_earth_1g": 27.3
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 0.76,
+            "spread_lunar_016g": 0.824,
+            "spread_earth_1g": 0.872,
+            "loi_0g": 25.69,
+            "loi_lunar_016g": 26.02,
+            "loi_earth_1g": 27.3
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 0.923,
+            "spread_lunar_016g": 0.917,
+            "spread_earth_1g": 0.902,
+            "loi_0g": 25.66,
+            "loi_lunar_016g": 25.98,
+            "loi_earth_1g": 27.3
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 1.065,
+            "spread_lunar_016g": 0.996,
+            "spread_earth_1g": 0.933,
+            "loi_0g": 25.62,
+            "loi_lunar_016g": 25.94,
+            "loi_earth_1g": 27.3
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 1.144,
+            "spread_lunar_016g": 1.034,
+            "spread_earth_1g": 0.959,
+            "loi_0g": 25.57,
+            "loi_lunar_016g": 25.89,
+            "loi_earth_1g": 27.31
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 1.108,
+            "spread_lunar_016g": 1.0,
+            "spread_earth_1g": 0.958,
+            "loi_0g": 25.54,
+            "loi_lunar_016g": 25.85,
+            "loi_earth_1g": 27.33
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 0.957,
+            "spread_lunar_016g": 0.881,
+            "spread_earth_1g": 0.906,
+            "loi_0g": 25.54,
+            "loi_lunar_016g": 25.82,
+            "loi_earth_1g": 27.39
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 0.784,
+            "spread_lunar_016g": 0.74,
+            "spread_earth_1g": 0.81,
+            "loi_0g": 25.56,
+            "loi_lunar_016g": 25.83,
+            "loi_earth_1g": 27.49
+          }
+        ]
+      },
+      "suit_85_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 3.112,
+            "flame_spread_ci95": 0.538,
+            "loi_pct": 22.99,
+            "loi_ci95": 1.01,
+            "peak_temp_k": 2646.2,
+            "radiative_fraction": 0.365
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 3.14,
+            "flame_spread_ci95": 0.566,
+            "loi_pct": 23.27,
+            "loi_ci95": 1.13,
+            "peak_temp_k": 2647.0,
+            "radiative_fraction": 0.344
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 3.273,
+            "flame_spread_ci95": 0.659,
+            "loi_pct": 23.56,
+            "loi_ci95": 1.26,
+            "peak_temp_k": 2649.0,
+            "radiative_fraction": 0.33
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 3.435,
+            "flame_spread_ci95": 0.919,
+            "loi_pct": 23.99,
+            "loi_ci95": 1.08,
+            "peak_temp_k": 2650.0,
+            "radiative_fraction": 0.297
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 3.57,
+            "flame_spread_ci95": 0.594,
+            "loi_pct": 24.38,
+            "loi_ci95": 0.99,
+            "peak_temp_k": 2649.9,
+            "radiative_fraction": 0.279
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 3.822,
+            "flame_spread_ci95": 0.628,
+            "loi_pct": 25.06,
+            "loi_ci95": 0.99,
+            "peak_temp_k": 2647.8,
+            "radiative_fraction": 0.248
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 4.144,
+            "flame_spread_ci95": 0.67,
+            "loi_pct": 25.3,
+            "loi_ci95": 1.19,
+            "peak_temp_k": 2651.0,
+            "radiative_fraction": 0.234
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 4.219,
+            "flame_spread_ci95": 0.841,
+            "loi_pct": 25.62,
+            "loi_ci95": 0.87,
+            "peak_temp_k": 2647.1,
+            "radiative_fraction": 0.213
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 4.179,
+            "flame_spread_ci95": 0.748,
+            "loi_pct": 25.93,
+            "loi_ci95": 0.9,
+            "peak_temp_k": 2648.1,
+            "radiative_fraction": 0.202
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 2.847,
+            "spread_lunar_016g": 3.083,
+            "spread_earth_1g": 3.956,
+            "loi_0g": 22.9,
+            "loi_lunar_016g": 23.07,
+            "loi_earth_1g": 25.71
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 2.973,
+            "spread_lunar_016g": 3.151,
+            "spread_earth_1g": 4.0,
+            "loi_0g": 22.74,
+            "loi_lunar_016g": 23.25,
+            "loi_earth_1g": 25.75
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 3.082,
+            "spread_lunar_016g": 3.265,
+            "spread_earth_1g": 4.045,
+            "loi_0g": 22.79,
+            "loi_lunar_016g": 23.67,
+            "loi_earth_1g": 25.78
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 3.161,
+            "spread_lunar_016g": 3.42,
+            "spread_earth_1g": 4.065,
+            "loi_0g": 23.17,
+            "loi_lunar_016g": 24.13,
+            "loi_earth_1g": 25.8
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 3.326,
+            "spread_lunar_016g": 3.674,
+            "spread_earth_1g": 4.057,
+            "loi_0g": 23.83,
+            "loi_lunar_016g": 24.64,
+            "loi_earth_1g": 25.81
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 3.704,
+            "spread_lunar_016g": 4.029,
+            "spread_earth_1g": 3.981,
+            "loi_0g": 24.62,
+            "loi_lunar_016g": 25.1,
+            "loi_earth_1g": 25.79
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 4.073,
+            "spread_lunar_016g": 4.238,
+            "spread_earth_1g": 3.821,
+            "loi_0g": 25.08,
+            "loi_lunar_016g": 25.34,
+            "loi_earth_1g": 25.75
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 4.144,
+            "spread_lunar_016g": 4.122,
+            "spread_earth_1g": 3.513,
+            "loi_0g": 25.31,
+            "loi_lunar_016g": 25.45,
+            "loi_earth_1g": 25.66
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 3.805,
+            "spread_lunar_016g": 3.712,
+            "spread_earth_1g": 3.164,
+            "loi_0g": 25.37,
+            "loi_lunar_016g": 25.47,
+            "loi_earth_1g": 25.59
+          }
+        ]
+      }
+    },
+    "Silicone_Sheet": {
+      "iss_21_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 0.648,
+            "flame_spread_ci95": 0.114,
+            "loi_pct": 18.64,
+            "loi_ci95": 0.21,
+            "peak_temp_k": 1664.0,
+            "radiative_fraction": 0.49
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 0.674,
+            "flame_spread_ci95": 0.155,
+            "loi_pct": 18.7,
+            "loi_ci95": 0.33,
+            "peak_temp_k": 1671.9,
+            "radiative_fraction": 0.469
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 0.689,
+            "flame_spread_ci95": 0.094,
+            "loi_pct": 18.85,
+            "loi_ci95": 0.26,
+            "peak_temp_k": 1678.4,
+            "radiative_fraction": 0.455
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 0.708,
+            "flame_spread_ci95": 0.129,
+            "loi_pct": 18.87,
+            "loi_ci95": 0.25,
+            "peak_temp_k": 1694.3,
+            "radiative_fraction": 0.425
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 0.695,
+            "flame_spread_ci95": 0.152,
+            "loi_pct": 19.07,
+            "loi_ci95": 0.33,
+            "peak_temp_k": 1709.7,
+            "radiative_fraction": 0.399
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 0.697,
+            "flame_spread_ci95": 0.112,
+            "loi_pct": 19.14,
+            "loi_ci95": 0.39,
+            "peak_temp_k": 1728.1,
+            "radiative_fraction": 0.362
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 0.71,
+            "flame_spread_ci95": 0.102,
+            "loi_pct": 19.21,
+            "loi_ci95": 0.32,
+            "peak_temp_k": 1750.8,
+            "radiative_fraction": 0.324
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 0.721,
+            "flame_spread_ci95": 0.146,
+            "loi_pct": 19.29,
+            "loi_ci95": 0.39,
+            "peak_temp_k": 1766.2,
+            "radiative_fraction": 0.295
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 0.793,
+            "flame_spread_ci95": 0.165,
+            "loi_pct": 19.44,
+            "loi_ci95": 0.58,
+            "peak_temp_k": 1767.5,
+            "radiative_fraction": 0.291
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 0.442,
+            "spread_lunar_016g": 0.549,
+            "spread_earth_1g": 0.747,
+            "loi_0g": 18.16,
+            "loi_lunar_016g": 18.6,
+            "loi_earth_1g": 19.35
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 0.521,
+            "spread_lunar_016g": 0.6,
+            "spread_earth_1g": 0.748,
+            "loi_0g": 18.31,
+            "loi_lunar_016g": 18.68,
+            "loi_earth_1g": 19.37
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 0.635,
+            "spread_lunar_016g": 0.68,
+            "spread_earth_1g": 0.754,
+            "loi_0g": 18.53,
+            "loi_lunar_016g": 18.84,
+            "loi_earth_1g": 19.41
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 0.767,
+            "spread_lunar_016g": 0.777,
+            "spread_earth_1g": 0.766,
+            "loi_0g": 18.74,
+            "loi_lunar_016g": 18.99,
+            "loi_earth_1g": 19.47
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 0.985,
+            "spread_lunar_016g": 0.935,
+            "spread_earth_1g": 0.791,
+            "loi_0g": 18.96,
+            "loi_lunar_016g": 19.15,
+            "loi_earth_1g": 19.56
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 1.36,
+            "spread_lunar_016g": 1.204,
+            "spread_earth_1g": 0.85,
+            "loi_0g": 19.09,
+            "loi_lunar_016g": 19.24,
+            "loi_earth_1g": 19.74
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 1.689,
+            "spread_lunar_016g": 1.455,
+            "spread_earth_1g": 0.944,
+            "loi_0g": 19.04,
+            "loi_lunar_016g": 19.2,
+            "loi_earth_1g": 19.96
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 1.751,
+            "spread_lunar_016g": 1.53,
+            "spread_earth_1g": 1.081,
+            "loi_0g": 18.93,
+            "loi_lunar_016g": 19.12,
+            "loi_earth_1g": 20.23
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 1.466,
+            "spread_lunar_016g": 1.321,
+            "spread_earth_1g": 1.126,
+            "loi_0g": 18.96,
+            "loi_lunar_016g": 19.12,
+            "loi_earth_1g": 20.48
+          }
+        ]
+      },
+      "lunar_34_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 2.427,
+            "flame_spread_ci95": 0.2,
+            "loi_pct": 16.92,
+            "loi_ci95": 0.4,
+            "peak_temp_k": 2017.3,
+            "radiative_fraction": 0.38
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 2.517,
+            "flame_spread_ci95": 0.219,
+            "loi_pct": 17.14,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 2025.4,
+            "radiative_fraction": 0.365
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 2.598,
+            "flame_spread_ci95": 0.203,
+            "loi_pct": 17.32,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 2029.6,
+            "radiative_fraction": 0.351
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 2.626,
+            "flame_spread_ci95": 0.264,
+            "loi_pct": 17.49,
+            "loi_ci95": 0.4,
+            "peak_temp_k": 2033.7,
+            "radiative_fraction": 0.339
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 2.698,
+            "flame_spread_ci95": 0.189,
+            "loi_pct": 17.73,
+            "loi_ci95": 0.29,
+            "peak_temp_k": 2037.7,
+            "radiative_fraction": 0.321
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 2.724,
+            "flame_spread_ci95": 0.202,
+            "loi_pct": 18.03,
+            "loi_ci95": 0.3,
+            "peak_temp_k": 2040.8,
+            "radiative_fraction": 0.3
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 2.642,
+            "flame_spread_ci95": 0.206,
+            "loi_pct": 18.28,
+            "loi_ci95": 0.34,
+            "peak_temp_k": 2043.2,
+            "radiative_fraction": 0.28
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 2.563,
+            "flame_spread_ci95": 0.269,
+            "loi_pct": 18.46,
+            "loi_ci95": 0.23,
+            "peak_temp_k": 2047.3,
+            "radiative_fraction": 0.267
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 2.615,
+            "flame_spread_ci95": 0.219,
+            "loi_pct": 18.57,
+            "loi_ci95": 0.34,
+            "peak_temp_k": 2042.8,
+            "radiative_fraction": 0.257
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 1.521,
+            "spread_lunar_016g": 1.962,
+            "spread_earth_1g": 2.433,
+            "loi_0g": 16.51,
+            "loi_lunar_016g": 17.31,
+            "loi_earth_1g": 18.63
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 1.791,
+            "spread_lunar_016g": 2.217,
+            "spread_earth_1g": 2.485,
+            "loi_0g": 16.67,
+            "loi_lunar_016g": 17.39,
+            "loi_earth_1g": 18.61
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 2.257,
+            "spread_lunar_016g": 2.555,
+            "spread_earth_1g": 2.559,
+            "loi_0g": 16.89,
+            "loi_lunar_016g": 17.49,
+            "loi_earth_1g": 18.57
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 2.684,
+            "spread_lunar_016g": 2.823,
+            "spread_earth_1g": 2.624,
+            "loi_0g": 17.04,
+            "loi_lunar_016g": 17.56,
+            "loi_earth_1g": 18.53
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 3.099,
+            "spread_lunar_016g": 3.061,
+            "spread_earth_1g": 2.695,
+            "loi_0g": 17.2,
+            "loi_lunar_016g": 17.66,
+            "loi_earth_1g": 18.47
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 3.379,
+            "spread_lunar_016g": 3.193,
+            "spread_earth_1g": 2.762,
+            "loi_0g": 17.43,
+            "loi_lunar_016g": 17.81,
+            "loi_earth_1g": 18.4
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 3.337,
+            "spread_lunar_016g": 3.108,
+            "spread_earth_1g": 2.766,
+            "loi_0g": 17.68,
+            "loi_lunar_016g": 17.98,
+            "loi_earth_1g": 18.34
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 2.937,
+            "spread_lunar_016g": 2.748,
+            "spread_earth_1g": 2.617,
+            "loi_0g": 18.03,
+            "loi_lunar_016g": 18.23,
+            "loi_earth_1g": 18.34
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 2.397,
+            "spread_lunar_016g": 2.271,
+            "spread_earth_1g": 2.292,
+            "loi_0g": 18.39,
+            "loi_lunar_016g": 18.49,
+            "loi_earth_1g": 18.48
+          }
+        ]
+      },
+      "mars_30_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 2.134,
+            "flame_spread_ci95": 0.167,
+            "loi_pct": 16.89,
+            "loi_ci95": 0.25,
+            "peak_temp_k": 1948.0,
+            "radiative_fraction": 0.385
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 2.161,
+            "flame_spread_ci95": 0.262,
+            "loi_pct": 17.06,
+            "loi_ci95": 0.27,
+            "peak_temp_k": 1955.4,
+            "radiative_fraction": 0.371
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 2.15,
+            "flame_spread_ci95": 0.307,
+            "loi_pct": 17.3,
+            "loi_ci95": 0.36,
+            "peak_temp_k": 1963.1,
+            "radiative_fraction": 0.356
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 2.218,
+            "flame_spread_ci95": 0.23,
+            "loi_pct": 17.51,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 1961.6,
+            "radiative_fraction": 0.344
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 2.216,
+            "flame_spread_ci95": 0.285,
+            "loi_pct": 17.72,
+            "loi_ci95": 0.31,
+            "peak_temp_k": 1966.5,
+            "radiative_fraction": 0.324
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 2.17,
+            "flame_spread_ci95": 0.158,
+            "loi_pct": 17.99,
+            "loi_ci95": 0.34,
+            "peak_temp_k": 1972.2,
+            "radiative_fraction": 0.305
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 2.047,
+            "flame_spread_ci95": 0.179,
+            "loi_pct": 18.26,
+            "loi_ci95": 0.28,
+            "peak_temp_k": 1976.0,
+            "radiative_fraction": 0.285
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 2.016,
+            "flame_spread_ci95": 0.121,
+            "loi_pct": 18.49,
+            "loi_ci95": 0.33,
+            "peak_temp_k": 1981.9,
+            "radiative_fraction": 0.268
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 1.942,
+            "flame_spread_ci95": 0.17,
+            "loi_pct": 18.67,
+            "loi_ci95": 0.39,
+            "peak_temp_k": 1979.2,
+            "radiative_fraction": 0.258
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 1.362,
+            "spread_lunar_016g": 1.692,
+            "spread_earth_1g": 1.842,
+            "loi_0g": 16.43,
+            "loi_lunar_016g": 17.22,
+            "loi_earth_1g": 18.68
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 1.604,
+            "spread_lunar_016g": 1.883,
+            "spread_earth_1g": 1.879,
+            "loi_0g": 16.58,
+            "loi_lunar_016g": 17.31,
+            "loi_earth_1g": 18.67
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 1.989,
+            "spread_lunar_016g": 2.15,
+            "spread_earth_1g": 1.938,
+            "loi_0g": 16.8,
+            "loi_lunar_016g": 17.41,
+            "loi_earth_1g": 18.64
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 2.346,
+            "spread_lunar_016g": 2.373,
+            "spread_earth_1g": 1.997,
+            "loi_0g": 16.95,
+            "loi_lunar_016g": 17.5,
+            "loi_earth_1g": 18.61
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 2.702,
+            "spread_lunar_016g": 2.583,
+            "spread_earth_1g": 2.073,
+            "loi_0g": 17.12,
+            "loi_lunar_016g": 17.61,
+            "loi_earth_1g": 18.57
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 2.944,
+            "spread_lunar_016g": 2.71,
+            "spread_earth_1g": 2.166,
+            "loi_0g": 17.37,
+            "loi_lunar_016g": 17.77,
+            "loi_earth_1g": 18.51
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 2.89,
+            "spread_lunar_016g": 2.637,
+            "spread_earth_1g": 2.215,
+            "loi_0g": 17.65,
+            "loi_lunar_016g": 17.97,
+            "loi_earth_1g": 18.46
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 2.488,
+            "spread_lunar_016g": 2.298,
+            "spread_earth_1g": 2.13,
+            "loi_0g": 18.05,
+            "loi_lunar_016g": 18.25,
+            "loi_earth_1g": 18.49
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 1.961,
+            "spread_lunar_016g": 1.843,
+            "spread_earth_1g": 1.866,
+            "loi_0g": 18.45,
+            "loi_lunar_016g": 18.56,
+            "loi_earth_1g": 18.67
+          }
+        ]
+      },
+      "suit_85_o2": {
+        "gravity_sweep_at_6cms": [
+          {
+            "gravity_g": 0.0,
+            "flame_spread_mm_s": 5.129,
+            "flame_spread_ci95": 0.448,
+            "loi_pct": 16.25,
+            "loi_ci95": 1.14,
+            "peak_temp_k": 2607.5,
+            "radiative_fraction": 0.32
+          },
+          {
+            "gravity_g": 0.05,
+            "flame_spread_mm_s": 5.281,
+            "flame_spread_ci95": 0.691,
+            "loi_pct": 16.81,
+            "loi_ci95": 1.24,
+            "peak_temp_k": 2616.0,
+            "radiative_fraction": 0.298
+          },
+          {
+            "gravity_g": 0.1,
+            "flame_spread_mm_s": 5.399,
+            "flame_spread_ci95": 0.485,
+            "loi_pct": 17.31,
+            "loi_ci95": 0.99,
+            "peak_temp_k": 2628.3,
+            "radiative_fraction": 0.281
+          },
+          {
+            "gravity_g": 0.16,
+            "flame_spread_mm_s": 5.697,
+            "flame_spread_ci95": 0.635,
+            "loi_pct": 17.78,
+            "loi_ci95": 0.89,
+            "peak_temp_k": 2637.9,
+            "radiative_fraction": 0.271
+          },
+          {
+            "gravity_g": 0.25,
+            "flame_spread_mm_s": 6.145,
+            "flame_spread_ci95": 0.601,
+            "loi_pct": 18.21,
+            "loi_ci95": 0.78,
+            "peak_temp_k": 2643.0,
+            "radiative_fraction": 0.253
+          },
+          {
+            "gravity_g": 0.38,
+            "flame_spread_mm_s": 6.72,
+            "flame_spread_ci95": 0.766,
+            "loi_pct": 18.9,
+            "loi_ci95": 0.91,
+            "peak_temp_k": 2647.9,
+            "radiative_fraction": 0.237
+          },
+          {
+            "gravity_g": 0.55,
+            "flame_spread_mm_s": 7.481,
+            "flame_spread_ci95": 0.847,
+            "loi_pct": 19.28,
+            "loi_ci95": 0.54,
+            "peak_temp_k": 2661.1,
+            "radiative_fraction": 0.212
+          },
+          {
+            "gravity_g": 0.75,
+            "flame_spread_mm_s": 7.956,
+            "flame_spread_ci95": 0.719,
+            "loi_pct": 19.54,
+            "loi_ci95": 0.87,
+            "peak_temp_k": 2666.7,
+            "radiative_fraction": 0.189
+          },
+          {
+            "gravity_g": 1.0,
+            "flame_spread_mm_s": 7.934,
+            "flame_spread_ci95": 0.989,
+            "loi_pct": 19.33,
+            "loi_ci95": 0.8,
+            "peak_temp_k": 2666.1,
+            "radiative_fraction": 0.175
+          }
+        ],
+        "flow_sweep": [
+          {
+            "flow_cms": 0.0,
+            "spread_0g": 5.09,
+            "spread_lunar_016g": 5.076,
+            "spread_earth_1g": 7.664,
+            "loi_0g": 14.35,
+            "loi_lunar_016g": 16.34,
+            "loi_earth_1g": 19.4
+          },
+          {
+            "flow_cms": 2.0,
+            "spread_0g": 5.055,
+            "spread_lunar_016g": 5.203,
+            "spread_earth_1g": 7.763,
+            "loi_0g": 14.93,
+            "loi_lunar_016g": 16.87,
+            "loi_earth_1g": 19.41
+          },
+          {
+            "flow_cms": 5.0,
+            "spread_0g": 5.076,
+            "spread_lunar_016g": 5.522,
+            "spread_earth_1g": 7.859,
+            "loi_0g": 15.89,
+            "loi_lunar_016g": 17.57,
+            "loi_earth_1g": 19.42
+          },
+          {
+            "flow_cms": 8.0,
+            "spread_0g": 5.25,
+            "spread_lunar_016g": 5.959,
+            "spread_earth_1g": 7.9,
+            "loi_0g": 16.77,
+            "loi_lunar_016g": 18.14,
+            "loi_earth_1g": 19.42
+          },
+          {
+            "flow_cms": 12.0,
+            "spread_0g": 5.721,
+            "spread_lunar_016g": 6.615,
+            "spread_earth_1g": 7.879,
+            "loi_0g": 17.73,
+            "loi_lunar_016g": 18.69,
+            "loi_earth_1g": 19.42
+          },
+          {
+            "flow_cms": 18.0,
+            "spread_0g": 6.662,
+            "spread_lunar_016g": 7.43,
+            "spread_earth_1g": 7.721,
+            "loi_0g": 18.66,
+            "loi_lunar_016g": 19.14,
+            "loi_earth_1g": 19.41
+          },
+          {
+            "flow_cms": 25.0,
+            "spread_0g": 7.453,
+            "spread_lunar_016g": 7.834,
+            "spread_earth_1g": 7.4,
+            "loi_0g": 19.14,
+            "loi_lunar_016g": 19.37,
+            "loi_earth_1g": 19.39
+          },
+          {
+            "flow_cms": 35.0,
+            "spread_0g": 7.536,
+            "spread_lunar_016g": 7.547,
+            "spread_earth_1g": 6.795,
+            "loi_0g": 19.42,
+            "loi_lunar_016g": 19.53,
+            "loi_earth_1g": 19.38
+          },
+          {
+            "flow_cms": 45.0,
+            "spread_0g": 6.847,
+            "spread_lunar_016g": 6.738,
+            "spread_earth_1g": 6.106,
+            "loi_0g": 19.6,
+            "loi_lunar_016g": 19.67,
+            "loi_earth_1g": 19.37
+          }
+        ]
+      }
+    }
+  }
+}
