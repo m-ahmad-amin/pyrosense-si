@@ -1,0 +1,20 @@
+{
+  "aws": {
+    "bucket": "nasa-psi",
+    "region": "us-west-2",
+    "max_keys_per_prefix": 50
+  },
+  "pinn": {
+    "hidden_dim": 96,
+    "epochs": 1200,
+    "learning_rate": 0.003,
+    "weight_decay": 0.0001,
+    "collocation_points": 512,
+    "physics_loss_weight": 0.35,
+    "seed": 42
+  },
+  "vision": {
+    "frame_resolution": 320,
+    "scale_mm_per_px": 0.125
+  }
+}
