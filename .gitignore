@@ -26,3 +26,4 @@ env/
 venv/
 .ipynb_checkpoints/
 .pytest_cache/
+demo_videos/
