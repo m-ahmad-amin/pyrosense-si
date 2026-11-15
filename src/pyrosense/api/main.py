@@ -87,6 +87,14 @@ def serve_index():
     return FileResponse(str(WEB_DIR / "index.html"))
 
 
+@app.get("/hero-flame.jpg")
+def serve_hero_flame():
+    img_path = FRONTEND_DIST_DIR / "hero-flame.jpg"
+    if img_path.exists():
+        return FileResponse(str(img_path))
+    raise HTTPException(status_code=404, detail="Hero flame image not found")
+
+
 @app.get("/api/catalog")
 def get_catalog():
     catalog = load_catalog()

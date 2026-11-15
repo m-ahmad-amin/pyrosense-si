@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
+import WakeOverlay from "./components/WakeOverlay";
 import {
   ConfidenceLineChart,
   DualSeriesChart,
@@ -29,6 +30,7 @@ function assetUrl(path) {
 
 export default function App() {
   const [view, setView] = useState("hero");
+  const [backendReady, setBackendReady] = useState(false);
   const [catalog, setCatalog] = useState(null);
 
   const [pinnForm, setPinnForm] = useState({
@@ -52,6 +54,8 @@ export default function App() {
   });
   const [ranked, setRanked] = useState([]);
   const [selectedInvId, setSelectedInvId] = useState(null);
+  const [rankChartTab, setRankChartTab] = useState("envelope");
+  const [showAllRanked, setShowAllRanked] = useState(false);
 
   const [copilotRole, setCopilotRole] = useState("fire_engineer");
   const [copilotQuery, setCopilotQuery] = useState("What makes Lunar 0.16g more hazardous than ISS 0g?");
@@ -72,28 +76,46 @@ export default function App() {
   const [aerosolData, setAerosolData] = useState(null);
 
   useEffect(() => {
-    fetch("/api/catalog")
-      .then((r) => r.json())
-      .then((data) => {
-        setCatalog(data);
-        if (data.investigations && data.investigations.length >= 2) {
-          setCompareIds({
-            left: data.investigations[0].id,
-            right: data.investigations[1].id,
-          });
-        }
-      })
-      .catch(() => {});
+    let cancelled = false;
+    let retryTimer = null;
 
-    fetch("/api/pinn/fields2d")
-      .then((r) => r.json())
-      .then(setFields2d)
-      .catch(() => {});
+    const loadInitialData = () => {
+      fetch("/api/catalog")
+        .then((r) => {
+          if (!r.ok) throw new Error("Waking");
+          return r.json();
+        })
+        .then((data) => {
+          if (cancelled) return;
+          setCatalog(data);
+          if (data.investigations && data.investigations.length >= 2) {
+            setCompareIds({
+              left: data.investigations[0].id,
+              right: data.investigations[1].id,
+            });
+          }
+          setBackendReady(true);
+          fetch("/api/pinn/fields2d")
+            .then((r) => r.json())
+            .then((d) => !cancelled && setFields2d(d))
+            .catch(() => {});
+          fetch("/api/cv/metrics")
+            .then((r) => r.json())
+            .then((d) => !cancelled && setCvData(d))
+            .catch(() => {});
+        })
+        .catch(() => {
+          if (!cancelled) {
+            retryTimer = setTimeout(loadInitialData, 2500);
+          }
+        });
+    };
 
-    fetch("/api/cv/metrics")
-      .then((r) => r.json())
-      .then(setCvData)
-      .catch(() => {});
+    loadInitialData();
+    return () => {
+      cancelled = true;
+      if (retryTimer) clearTimeout(retryTimer);
+    };
   }, []);
 
   useEffect(() => {
@@ -181,9 +203,37 @@ export default function App() {
 
   return (
     <div>
+      <WakeOverlay ready={backendReady} />
       <header className="top-nav">
         <div className="brand-lockup" onClick={() => setView("hero")}>
-          <span className="brand-dot" />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 2.5A9.5 9.5 0 1 0 21.5 12"
+              stroke="rgba(255,255,255,0.82)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M16.5 3.6A9.5 9.5 0 0 1 20.4 7.5"
+              stroke="#e84b2c"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+            <path
+              d="M12 6.2L15.4 13.2C15.8 14.1 15.1 16.4 12 17.5C8.9 16.4 8.2 14.1 8.6 13.2L12 6.2Z"
+              stroke="#ffffff"
+              strokeWidth="1.4"
+              strokeLinejoin="round"
+            />
+            <circle cx="12" cy="13.5" r="1.5" fill="#e84b2c" />
+          </svg>
           <span>PyroSense-SI</span>
         </div>
 
@@ -207,7 +257,7 @@ export default function App() {
             </button>
           )}
           <button type="button" className="btn-white" onClick={() => setView("pinn")}>
-            Predict Risk
+            Predict Flame
           </button>
         </div>
       </header>
@@ -623,38 +673,63 @@ export default function App() {
               )}
             </section>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              <div className="two-grid">
-                <section className="glass-card">
-                  <div className="card-title-row">
-                    <h3>Cabin Envelope Map (O2 vs Pressure)</h3>
-                    <span className="mono-tag">Live Target</span>
+            <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
+              <section className="glass-card">
+                <div className="card-title-row">
+                  <h3>
+                    {rankChartTab === "envelope"
+                      ? "Cabin Envelope Map (O2 vs Pressure)"
+                      : "Top 5 Match Breakdown"}
+                  </h3>
+                  <div className="chip-row" style={{ marginTop: 0 }}>
+                    <button
+                      type="button"
+                      className="chip-btn"
+                      style={{
+                        color: rankChartTab === "envelope" ? "#fff" : undefined,
+                        borderColor: rankChartTab === "envelope" ? "rgba(255,255,255,0.3)" : undefined,
+                      }}
+                      onClick={() => setRankChartTab("envelope")}
+                    >
+                      Envelope Map
+                    </button>
+                    <button
+                      type="button"
+                      className="chip-btn"
+                      style={{
+                        color: rankChartTab === "breakdown" ? "#fff" : undefined,
+                        borderColor: rankChartTab === "breakdown" ? "rgba(255,255,255,0.3)" : undefined,
+                      }}
+                      onClick={() => setRankChartTab("breakdown")}
+                    >
+                      Score Breakdown
+                    </button>
                   </div>
-                  <div className="chart-box">
+                </div>
+                <div className="chart-box" style={{ height: 250 }}>
+                  {rankChartTab === "envelope" ? (
                     <EnvelopeScatterChart
                       investigations={investigations}
                       ranked={ranked}
                       targetO2={rankForm.o2_pct}
                       targetPsi={rankForm.pressure_psi}
                     />
-                  </div>
-                </section>
-
-                <section className="glass-card">
-                  <div className="card-title-row">
-                    <h3>Top 5 Match Breakdown</h3>
-                    <span className="mono-tag">0-100 Score</span>
-                  </div>
-                  <div className="chart-box">
+                  ) : (
                     <MatchBreakdownBarChart ranked={ranked} />
-                  </div>
-                </section>
-              </div>
+                  )}
+                </div>
+              </section>
 
               <section className="glass-card">
                 <div className="card-title-row">
-                  <h3>Ranked NASA PSI Investigations (Click row for range & geometry)</h3>
-                  <span className="mono-tag">{ranked.length} matches</span>
+                  <h3>Ranked NASA PSI Investigations</h3>
+                  <button
+                    type="button"
+                    className="chip-btn"
+                    onClick={() => setShowAllRanked((v) => !v)}
+                  >
+                    {showAllRanked ? "Show top 6" : `Show all ${ranked.length}`}
+                  </button>
                 </div>
                 <div className="table-scroll">
                   <table className="dark-table">
@@ -662,72 +737,47 @@ export default function App() {
                       <tr>
                         <th>Score</th>
                         <th>Investigation</th>
-                        <th>Hardware / Fuel</th>
-                        <th>Proximity Bars</th>
-                        <th>Key Finding & Rationale</th>
+                        <th>Facility</th>
+                        <th>Match</th>
+                        <th>Key Finding</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {ranked.map((item) => (
-                        <tr
-                          key={item.id}
-                          onClick={() => setSelectedInvId(item.id)}
-                          style={{
-                            cursor: "pointer",
-                            background: selectedInvId === item.id ? "rgba(255,255,255,0.04)" : "transparent",
-                          }}
-                        >
-                          <td>
-                            <span className={`pill-score ${item.relevance_score >= 70 ? "high" : ""}`}>
-                              {item.relevance_score}
-                            </span>
-                          </td>
-                          <td>
-                            <div style={{ fontWeight: 600 }}>{item.title}</div>
-                            <div style={{ fontSize: 11.5, color: "#9aa3b2" }}>
-                              {item.id} ({item.psi_id})
-                            </div>
-                          </td>
-                          <td>
-                            <div style={{ marginBottom: 4 }}>
-                              <span className="fuel-badge">{item.fuel_state}</span>
-                            </div>
-                            <div style={{ fontSize: 11.5, color: "#9aa3b2" }}>
-                              {item.facility} / {item.hardware_insert}
-                            </div>
-                          </td>
-                          <td>
-                            <div className="mini-bars">
-                              <div className="mini-bar-row">
-                                <span>O2</span>
-                                <div className="mini-bar-track">
-                                  <div className="mini-bar-fill ember" style={{ width: `${item.o2_match}%` }} />
-                                </div>
+                      {(showAllRanked ? ranked : ranked.slice(0, 6)).map((item) => {
+                        const isSelected = (selectedInvId || ranked[0]?.id) === item.id;
+                        return (
+                          <tr
+                            key={item.id}
+                            onClick={() => setSelectedInvId(item.id)}
+                            style={{
+                              cursor: "pointer",
+                              background: isSelected ? "rgba(255,255,255,0.04)" : "transparent",
+                            }}
+                          >
+                            <td>
+                              <span className={`pill-score ${item.relevance_score >= 70 ? "high" : ""}`}>
+                                {item.relevance_score}
+                              </span>
+                            </td>
+                            <td>
+                              <div style={{ fontWeight: 600, color: "#f3f5f8" }}>{item.title}</div>
+                              <div style={{ fontSize: 12, color: "#667085" }}>
+                                {item.id} · {item.psi_id}
                               </div>
-                              <div className="mini-bar-row">
-                                <span>Flow</span>
-                                <div className="mini-bar-track">
-                                  <div className="mini-bar-fill" style={{ width: `${item.flow_match}%` }} />
-                                </div>
-                              </div>
-                              <div className="mini-bar-row">
-                                <span>Grav</span>
-                                <div className="mini-bar-track">
-                                  <div className="mini-bar-fill" style={{ width: `${item.gravity_match}%` }} />
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td style={{ color: "#9aa3b2" }}>
-                            <div>{item.key_findings}</div>
-                            {item.rationale && (
-                              <div style={{ fontSize: 11.5, color: "#e84b2c", marginTop: 4 }}>
-                                {item.rationale}
-                              </div>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
+                            </td>
+                            <td>
+                              <div style={{ fontSize: 13, color: "#d0d6e0" }}>{item.facility}</div>
+                              <div style={{ fontSize: 12, color: "#667085" }}>{item.fuel_state}</div>
+                            </td>
+                            <td style={{ fontSize: 12.5, color: "#9aa3b2", whiteSpace: "nowrap" }}>
+                              O2 {Math.round(item.o2_match)} · Fl {Math.round(item.flow_match)} · g {Math.round(item.gravity_match)}
+                            </td>
+                            <td style={{ color: "#9aa3b2" }}>
+                              <div className="clamp-2">{item.key_findings}</div>
+                            </td>
+                          </tr>
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>

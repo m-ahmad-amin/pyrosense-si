@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import heroFlameUrl from "../assets/hero-flame.jpg";
 
 const HABITAT_PRESETS = [
   { label: "Lunar Base 0.16g (34% O2)", o2: 34, psi: 10.2, g: 0.16, flow: 12 },
@@ -58,9 +59,9 @@ export default function Hero({ onLaunch, onOpenRanker }) {
 
   return (
     <section className="hero-stage">
+      <img src={heroFlameUrl} alt="Microgravity flame" className="hero-flame-bg" />
+      <div className="hero-vignette" />
       <canvas ref={canvasRef} className="hero-canvas" />
-      <div className="hero-beam" />
-      <div className="hero-horizon" />
 
       <div className="hero-copy">
         <h1>Spacecraft fire safety from 0g to Mars.</h1>
