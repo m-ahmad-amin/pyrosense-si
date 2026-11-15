@@ -4,6 +4,8 @@
 
 PyroSense-SI is an interactive, AI-powered combustion intelligence platform built for the **2026 NASA Space Apps Challenge** (*Flame in Freefall: AI-Powered Fire Safety Insights from Microgravity Combustion Data*) by **Team Duck Typing**.
 
+**[▶ Live Website](https://pyrosense-si.netlify.app/)**
+
 Decades of microgravity (`0g`) fire experiments live inside NASA's Physical Science Informatics (PSI) database, yet **zero partial-gravity combustion tests exist** for Lunar (`0.16g`) or Martian (`0.38g`) habitats, where elevated oxygen (`30% to 34% O2` at `10.2 psi` or lower) dramatically increases flammability. PyroSense-SI bridges this data gap by combining a **16-investigation NASA PSI knowledge engine** with **three GPU-trained PyTorch models** to rank studies, predict partial-gravity flammability with 95% uncertainty bounds, solve live 2D Navier-Stokes flame fields, and segment real NASA microgravity flame imagery.
 
 ![PyroSense-SI Home Hero](docs/screenshots/01_home_hero.png)
