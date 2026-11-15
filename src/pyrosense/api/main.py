@@ -2,6 +2,7 @@ import json
 import pandas as pd
 import torch
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -33,6 +34,13 @@ from pyrosense.models.pinn import (
 from pyrosense.vision.flame_analyzer import run_flame_cv_pipeline
 
 app = FastAPI(title="PyroSense SI - NASA PSI Combustion Intelligence Platform")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 FRONTEND_DIST_DIR = WEB_DIR.parent / "frontend" / "dist"
 WEB_FRAMES_DIR.mkdir(parents=True, exist_ok=True)
