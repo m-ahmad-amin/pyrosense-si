@@ -5,13 +5,13 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://pyrosense-si-api.onrender.com/api/:splat"
+  to = "https://pyrosense-si.onrender.com/api/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "/assets/frames/*"
-  to = "https://pyrosense-si-api.onrender.com/assets/frames/:splat"
+  to = "https://pyrosense-si.onrender.com/assets/frames/:splat"
   status = 200
   force = true
 
